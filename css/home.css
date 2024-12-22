@@ -1,0 +1,378 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins";
+}
+
+body{
+  overflow-x: hidden;
+}
+
+.logo{
+  background-color: #6D6875;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.logo a{
+  text-decoration: none;
+  color: white;
+  text-align: center; /* Center the text inside the a tag */
+  margin: 0 auto; /* Ensure the a tag takes only the required space */
+  margin-top: 10px;
+}
+
+.logo a img{
+  vertical-align: middle;
+  height: 30px;
+  width: 30px;
+}
+
+img[alt="STEP-UP LOGO"]{
+width: 8%;
+height: 90px;
+margin-left: 50px;
+}
+
+.nav{
+  display: flex;
+  justify-content: center;
+  background-color: #FEFAE0;
+}
+
+.navbar{
+  display: flex;
+  margin-top: -30px;
+  width: 60%;
+  justify-content: center;
+  border-radius: 40px;
+  padding: 25px;
+  background-color: white;
+  box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.3);
+}
+
+.navbar li{
+  list-style: none;
+  margin: 0 25px;
+}
+
+.navbar li a{
+  text-decoration: none;
+  color: black;
+}
+
+.bg-color{
+  background-color: #FEFAE0;
+}
+
+.step-up-front{
+  display: flex;
+  padding-top: 60px;
+}
+
+.step-up-front img{
+  width: 45%;
+  padding: 0 30px;
+}
+
+.step-up-content{
+  padding-left: 50px;
+  padding-top: 50px;
+}
+
+.step-up-content h1{
+  font-size: 3rem;
+  font-weight: 400;
+  font-family: "Pompiere";
+}
+
+.step-up-content h2{
+  font-size: 1.8rem;
+  color: #D24259;
+  padding-top: 20px;
+}
+
+.step-up-content p{
+  font-size: 0.8rem;
+  padding-top: 25px;
+}
+
+.learn-more{
+  padding: 10px 25px;
+  border-radius: 30px;
+  background-color: #3880B7;
+  color: white;
+  margin-top: 30px;
+  border: none;
+  cursor: pointer;
+}
+
+img[alt="WAVE SHAPE IMAGE"]{
+  width: 100%;
+}
+
+.bg-color1{
+background-color: #7D838F;
+}
+
+.what-we-do{
+  padding-top: 40px;
+  padding-left: 40px;
+}
+
+.what-we-do h1{
+  font-size: 4rem;
+  color: white;
+  font-family: "Poetsen One";
+}
+
+.what-we-do h2{
+  font-size: 1.8rem;
+  color: #FFB5AA;
+  font-weight: 500;
+}
+
+.therapies {
+  display: flex;
+  justify-content: space-around;
+  padding-top: 30px;
+}
+
+.circle-overlay {
+  text-align: center;
+  position: relative;
+  padding-top: 40px;
+}
+
+.circle-overlay img {
+  margin-bottom: 10px; /* Space between image and text */
+  border-radius: 50%; /* Makes the icon circular */
+  background-color: white;
+  padding: 15px;
+}
+
+.circle-overlay h3 {
+  margin: 10px 0 0 0;
+  font-size: 1rem;
+  color: white;
+}
+
+.dashed-line{
+  border-bottom: 4px dashed white;
+  width: 80%;
+  padding-top: 50px;
+  margin: 20px auto;
+}
+
+.free-consulting{
+  display: flex;
+  padding-top: 50px;
+}
+
+.free-consulting img {
+  width: 30%;
+  padding-left: 80px;
+}
+
+.free-consulting-content {
+  padding-top: 80px;
+  text-align: center;
+}
+
+.free-consulting-content h1 {
+  font-size: 1.5rem;
+  color: #FFB5AA;
+  font-weight: 500;
+}
+
+.free-consulting-content h2{
+  font-size: 3rem;
+  color: white;
+  font-family: "Agdasima";
+}
+
+.free-consulting-content p{
+  font-size: 0.9rem;
+  padding: 20px 80px;
+  color: white;
+  font-weight: bold;
+}
+
+.get-consult{
+  padding: 10px 30px;
+  color: white;
+  background-color: #00ABFF;
+  box-shadow: 5px 5px 0px #006A9E;
+  border: none;
+  cursor: pointer;
+}
+
+.arrow img{
+  width: 25%;
+  margin-top: -50px;
+  padding-left: 100px;
+  padding-bottom: 20px;
+}
+
+.faq{
+  text-align: center;
+  padding-top: 40px;
+}
+
+.faq h1{
+  color: #D24259;
+  font-size: 2.5rem;
+  font-weight: 400;
+  font-family: "Prata";
+}
+
+.faq h2{
+  font-size: 2rem;
+  font-weight: 400;
+  font-family: "Preahvihear";
+}
+
+.que-ans{
+  padding-top: 20px;
+}
+
+.first-que, .second-que, .third-que, .fourth-que, .fifth-que{
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.second-que, .third-que, .fourth-que, .fifth-que{
+  padding-top: 50px;
+}
+
+.fifth-que{
+  margin-bottom: -250px;
+}
+
+.first-que h4, .second-que h4, .third-que h4, .fourth-que h4, .fifth-que h4{
+  font-size: 1.6rem;
+  font-weight: 400;
+  border-radius: 8px;
+  padding: 28px;
+  padding-right: 500px;
+  box-shadow: 10px 10px 10px -5px rgba(0, 0, 0, 0.3);
+  background-color: white;
+  font-family: "Pompiere";
+}
+
+.first-que span, .second-que span, .third-que span, .fourth-que span, .fifth-que span{
+  font-size: 2rem;
+  font-weight: 600;
+  color: white;
+  padding: 20px;
+  padding-top: 15px;
+  padding-left: 30px;
+  padding-right: 30px;
+  background-color: #FF788C;
+  border-radius: 5px;
+  box-shadow: 10px 10px 10px -5px rgba(0, 0, 0, 0.3);
+}
+
+.cubicles{
+  display: flex;
+  justify-content: space-between;
+}
+
+img[alt="CURVE IMAGE"]{
+  position: relative;
+  top: 20rem;
+  left: 3%;
+  height: 100px;
+  width: 9%;
+  z-index: 99;
+}
+
+img[alt="CUBICLES IMAGE"]{
+  position: relative;
+  top: 10rem;
+  left: 12%;
+  clip-path: inset(0 30% 40% 0%);
+  width: 30%;
+}
+
+footer{
+  position: relative;
+  z-index: 1;
+}
+
+.info{
+  display: flex;
+  justify-content: space-around;
+  background-color: #005D8D;
+}
+
+.contact{
+  margin-left: 150px;
+  margin-top: 40px;
+}
+
+.whatsapp, .email, .location{
+  display: flex;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+
+.circle-foot {
+  width: 45px; /* Adjust the size of the circle image */
+  height: 45px; /* Adjust the size of the circle image */
+  border-radius: 50%;
+  background-color: #D24259;
+  box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.3);
+}
+
+.circle-img {
+    object-fit: cover; 
+    padding: 8px;  
+}
+
+.whatsapp-content a, .email-content a, .location-content a{
+  text-decoration: none;
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.whatsapp-content p, .email-content p{
+margin-top: 8px;
+}
+
+.logo1{
+  margin-top: 20px;
+  margin-left: 300px;
+}
+
+.logo1 img{
+  width: 30%;
+  height: 150px;
+}
+
+.logo1 p{
+  padding-bottom: 20px;
+  color: white;
+  font-size: 1rem;
+  padding-right: 150px;
+  font-weight: bold;
+}
+
+.copyright{
+  background-color: black;
+  padding: 20px;
+}
+
+.copyright h6{
+  text-align: center;
+  color: white;
+}
+
+.copyright a{
+  color: royalblue;
+  text-decoration: none;
+}

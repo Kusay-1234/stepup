@@ -1,0 +1,319 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins";
+}
+
+body{
+  overflow-x: hidden;
+}
+
+@font-face {
+  font-family: 'BM HANNA';
+  src: url('BM-HANNA.ttf') format('truetype');
+}
+
+.logo{
+  background-color: #6D6875;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.logo a{
+  text-decoration: none;
+  color: white;
+  text-align: center; /* Center the text inside the a tag */
+  margin: 0 auto; /* Ensure the a tag takes only the required space */
+  margin-top: 10px;
+}
+
+.logo a img{
+  vertical-align: middle;
+  height: 30px;
+  width: 30px;
+}
+
+img[alt="STEP-UP LOGO"]{
+width: 8%;
+height: 90px;
+margin-left: 50px;
+}
+
+.nav{
+  display: flex;
+  justify-content: center;
+  background-color: #FEFAE0;
+}
+
+.navbar{
+  display: flex;
+  margin-top: -30px;
+  width: 60%;
+  justify-content: space-around;
+  border-radius: 40px;
+  padding: 25px;
+  background-color: white;
+  box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.3);
+}
+
+.navbar li{
+  list-style: none;
+  margin: 0 25px;
+}
+
+.navbar li a{
+  text-decoration: none;
+  color: black;
+}
+
+main{
+  background-color: #FEFAE0;
+}
+
+img[alt="A Girl Image"]{
+  width: 7%;
+  height: 200px;
+}
+
+.support {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.our-support{
+  margin-top: 60px;
+  position: relative;
+  right: 15%;
+}
+
+.our-support h1{
+  font-family: 'BM HANNA'; 
+  font-size: 4rem;
+  text-align: center;
+}
+
+.our-support h2{
+  font-size: 4rem;
+}
+
+#at{
+  color: #FFA800;
+  font-family: "Gochi Hand";
+}
+
+#help{
+  color: #9C8FC4;
+  font-family: "Gochi Hand";
+}
+
+#thrive{
+    font-family: "Bubblegum Sans";
+    color: #4D4854;
+}
+
+.our-support h3{
+  font-family: "Cabin";
+  font-size: 3rem;
+  text-align: center;
+  font-weight: 500;
+}
+
+.learn-more{
+  display: flex;
+  justify-content: center;
+}
+
+.our-support p {
+  background-color: #6D6875;
+  text-align: center;
+  border-radius: 30px;
+  padding: 6px;
+  display: inline-flex; /* Flexbox for aligning the elements */
+  align-items: center;  /* Center the content vertically */
+  font-size: 1.2rem;
+  margin-top: 40px;
+  color: white;
+  font-family: "Potta One";
+}
+
+.circle {
+  display: inline-flex;
+  justify-content: center; /* Align the arrow inside the circle */
+  align-items: center;     /* Vertically center the arrow */
+  width: 40px;
+  height: 40px;
+  font-size: 2.5rem;
+  background-color: white;
+  border-radius: 50%;
+  margin-right: 10px; /* Space between the circle and the text */
+  color: black;
+}
+
+.compassionate{
+  margin-top: 80px;
+  margin-left: 50px;
+}
+
+.compassionate h1{
+  color: #635688;
+  font-weight: 400;
+  font-family: "Preahvihear";
+  font-size: 1.6rem;
+}
+
+.compassionate h2{
+  font-family: "Potta One";
+  font-size: 1.5rem;
+}
+
+img[ alt="CIRCLE IMAGE"]{
+  width: 6%;
+  position: relative;
+  bottom: 5rem;
+  left: 3%;
+}
+
+.stages {
+  display: flex;              /* Display the stages in a row */
+  justify-content: space-around; /* Distribute space evenly between each stage */
+  flex-wrap: wrap;            
+  margin-left: 50px;
+}
+
+.stage {
+  flex: 1 1 200px;            /*Allow the stages to grow/shrink, with a minimum width of 200px*/
+  margin-bottom: -160px;
+}
+
+.stage img {
+  max-width: 85%;            /* Ensure the image fits within its container */
+  height: auto;               /* Maintain the aspect ratio */
+  transition: transform 0.3s ease-in-out; /* Smooth transition for the zoom effect */
+}
+
+.stage:hover img {
+  transform: scale(1.1);      /* Scale the image by 10% on hover */
+}
+
+.stage a{
+  text-decoration: none;
+  color: white;
+}
+
+.text-overlay {
+  position: relative;         /* Position text on top of the image */
+  bottom: 55%;
+  left: 10%;                    /* Center the text vertically */
+  color: white;                /* Make the text white for visibility on the image */
+  font-size: 1.5rem;           /* Style for the text */
+  margin-top: 30px;
+}
+
+.text-overlay p {
+  font-size: 1.6rem;             /* Style the #1, #2, etc. text */
+  font-weight: bold;
+  font-family: "Port Lligat Sans";
+}
+
+.text-overlay h1 {
+  font-size: 2rem;           /* Style the "Early Childhood", etc. text */
+}
+
+.early{
+  color: #AD3946;
+  max-width: 20%;
+}
+
+.child{
+  color: #635688;
+}
+
+img[alt="CURVE IMAGE"]{
+  position: relative;
+  top: 3.5rem;
+  left: 3%;
+  height: 100px;
+  width: 9%;
+  z-index: 99;
+}
+
+footer{
+  position: relative;
+  z-index: 1;
+}
+
+.info{
+  display: flex;
+  justify-content: space-around;
+  background-color: #005D8D;
+}
+
+.contact{
+  margin-left: 150px;
+  margin-top: 40px;
+}
+
+.whatsapp, .email, .location{
+  display: flex;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+
+.circle-foot {
+  width: 45px; /* Adjust the size of the circle image */
+  height: 45px; /* Adjust the size of the circle image */
+  border-radius: 50%;
+  background-color: #D24259;
+  box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.3);
+}
+
+.circle-img {
+    object-fit: cover; 
+    padding: 8px;  
+}
+
+.whatsapp-content a, .email-content a, .location-content a{
+  text-decoration: none;
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.whatsapp-content p, .email-content p{
+margin-top: 8px;
+}
+
+.logo1{
+  margin-top: 20px;
+  margin-left: 300px;
+}
+
+.logo1 img{
+  width: 30%;
+  height: 150px;
+}
+
+.logo1 p{
+  padding-bottom: 20px;
+  color: white;
+  font-size: 1rem;
+  padding-right: 150px;
+  font-weight: bold;
+}
+
+.copyright{
+  background-color: black;
+  padding: 20px;
+}
+
+.copyright h6{
+  text-align: center;
+  color: white;
+}
+
+.copyright a{
+  color: royalblue;
+  text-decoration: none;
+}

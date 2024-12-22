@@ -1,0 +1,244 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins";
+}
+
+body{
+  overflow-x: hidden;
+}
+
+.logo{
+  background-color: #6D6875;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.logo a{
+  text-decoration: none;
+  color: white;
+  text-align: center; /* Center the text inside the a tag */
+  margin: 0 auto; /* Ensure the a tag takes only the required space */
+  margin-top: 10px;
+}
+
+.logo a img{
+  vertical-align: middle;
+  height: 30px;
+  width: 30px;
+}
+
+img[alt="STEP-UP LOGO"]{
+width: 8%;
+height: 90px;
+margin-left: 50px;
+}
+
+.nav{
+  display: flex;
+  justify-content: center;
+  background-color: #FEFAE0;
+}
+
+.navbar{
+  display: flex;
+  margin-top: -30px;
+  width: 60%;
+  justify-content: center;
+  border-radius: 40px;
+  padding: 25px;
+  background-color: white;
+  box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.3);
+}
+
+.navbar li{
+  list-style: none;
+  margin: 0 25px;
+}
+
+.navbar li a{
+  text-decoration: none;
+  color: black;
+}
+
+main{
+  background-color: #FEFAE0;
+}
+
+img[alt="MIAN IMAGE WITH BOTTOM CURVE"]{
+  width: 100%;
+  margin-top: 30px;
+}
+
+.our-therapies{
+  display: flex;
+  position: absolute;
+  top: 30%;
+}
+
+.our-therapies img{
+  width: 40%;
+  margin-right: 60px;
+}
+
+.therapies-content{
+  margin-left: 120px;
+  margin-top: 20px;
+}
+
+.therapies-content h1{
+  font-size: 5rem;
+  font-family: "Poetsen One";
+  color: rgb(109, 107, 107);
+}
+
+.therapies-content h2{
+  font-size: 4rem;
+  color: #D24259;
+}
+
+.therapies-content p{
+  font-size: 0.8rem;
+  color: grey;
+  max-width: 70%;
+}
+
+/* .therapy{
+  margin-top: 50px;
+} */
+
+.occupational-therapy, .speech-therapy, .behaviour-therapy, .remedial-therapy, .special-education-therapy {
+  display: flex;
+  margin-top: 80px;
+}
+
+.occupational-therapy img, .behaviour-therapy img, .special-education-therapy img{
+  width: 35%;
+  margin-left: 50px;
+  transition: transform 0.3s ease-in-out; /* Smooth transition for the zoom effect */
+}
+
+.occupational-therapy img:hover, .behaviour-therapy img:hover, .special-education-therapy img:hover{
+  transform: scale(1.1);      /* Scale the image by 10% on hover */
+}
+
+.speech-therapy img, .remedial-therapy img{
+  width: 35%;
+  margin-right: 50px;
+  transition: transform 0.3s ease-in-out; /* Smooth transition for the zoom effect */
+}
+
+.speech-therapy img:hover, .remedial-therapy img:hover{
+  transform: scale(1.1);      /* Scale the image by 10% on hover */
+}
+
+.occupational-therapy-content, .speech-therapy-content, .behaviour-therapy-content, .remedial-therapy-content, .special-education-therapy-content{
+  text-align: center;
+  margin-top: 50px;
+  padding: 0 30px;
+}
+
+.occupational-therapy-content h1, .speech-therapy-content h1, .behaviour-therapy-content h1, .remedial-therapy-content h1, .special-education-therapy-content h1{
+  font-size: 4rem;
+  color: #D24259;
+}
+
+.occupational-therapy-content h2, .speech-therapy-content h2, .behaviour-therapy-content h2, .remedial-therapy-content h2, .special-education-therapy-content h2{
+  color: rgb(109, 107, 107);
+  font-size: 3rem;
+  margin-top: -25px;
+}
+
+.occupational-therapy p, .speech-therapy-content p, .behaviour-therapy-content p, .remedial-therapy-content p, .special-education-therapy-content p{
+  font-size: 0.8rem;
+}
+
+img[alt="CURVE IMAGE"]{
+  position: relative;
+  top: 3.5rem;
+  left: 3%;
+  height: 100px;
+  width: 9%;
+  z-index: 99;
+}
+
+footer{
+  position: relative;
+  z-index: 1;
+}
+
+.info{
+  display: flex;
+  justify-content: space-around;
+  background-color: #005D8D;
+}
+
+.contact{
+  margin-left: 150px;
+  margin-top: 40px;
+}
+
+.whatsapp, .email, .location{
+  display: flex;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+
+.circle-foot {
+  width: 45px; /* Adjust the size of the circle image */
+  height: 45px; /* Adjust the size of the circle image */
+  border-radius: 50%;
+  background-color: #D24259;
+  box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.3);
+}
+
+.circle-img {
+    object-fit: cover; 
+    padding: 8px;  
+}
+
+.whatsapp-content a, .email-content a, .location-content a{
+  text-decoration: none;
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.whatsapp-content p, .email-content p{
+margin-top: 8px;
+}
+
+.logo1{
+  margin-top: 20px;
+  margin-left: 300px;
+}
+
+.logo1 img{
+  width: 30%;
+  height: 150px;
+}
+
+.logo1 p{
+  padding-bottom: 20px;
+  color: white;
+  font-size: 1rem;
+  padding-right: 150px;
+  font-weight: bold;
+}
+
+.copyright{
+  background-color: black;
+  padding: 20px;
+}
+
+.copyright h6{
+  text-align: center;
+  color: white;
+}
+
+.copyright a{
+  color: royalblue;
+  text-decoration: none;
+}

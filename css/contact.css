@@ -1,0 +1,304 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins";
+}
+
+body{
+  overflow-x: hidden;
+}
+
+.logo{
+  background-color: #6D6875;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.logo a{
+  text-decoration: none;
+  color: white;
+  text-align: center; /* Center the text inside the a tag */
+  margin: 0 auto; /* Ensure the a tag takes only the required space */
+  margin-top: 10px;
+}
+
+.logo a img{
+  vertical-align: middle;
+  height: 30px;
+  width: 30px;
+}
+
+img[alt="STEP-UP LOGO"]{
+width: 8%;
+height: 90px;
+margin-left: 50px;
+}
+
+.nav{
+  display: flex;
+  justify-content: center;
+  background-color: #CFE1E5;
+}
+
+.navbar{
+  display: flex;
+  margin-top: -30px;
+  width: 60%;
+  justify-content: center;
+  border-radius: 40px;
+  padding: 25px;
+  background-color: white;
+  box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.3);
+}
+
+.navbar li{
+  list-style: none;
+  margin: 0 25px;
+}
+
+.navbar li a{
+  text-decoration: none;
+  color: black;
+}
+
+.bg-color{
+  background-color: #CFE1E5;
+}
+
+.contact-content{
+  text-align: center;
+  padding-top: 80px;
+}
+
+.contact-content h1{
+  font-family: "Potta One";
+  font-size: 5rem;
+}
+
+.contact-content p{
+  font-family: "Pompiere";
+  font-size: 2rem;
+  padding: 0 180px;
+  padding-bottom: 120px;
+}
+
+.bg-color1{
+  background-color: #FEFAE0;
+}
+
+.container {
+  display: flex;
+  justify-content: space-around;
+  padding-top: 50px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 120%;
+  padding: 20px;
+  font-size: 1rem;
+  border-radius: 40px;
+  border: none;
+  background-color: #EAE3B8;
+  font-family: "Protest Riot";
+}
+
+.horizon{
+  display: flex;
+  gap: 105px;
+}
+
+#email, #phone{
+  width: 145%;
+}
+
+.form-group textarea {
+  height: 150px;
+  border-radius: 10px;
+}
+
+.form-container button {
+  padding: 12px 60px;
+  background-color: #EAE3B8;
+  border: none;
+  border-radius: 40px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  font-weight: bold;
+  font-family: "Protest Riot";
+  box-shadow: 3px 4px 0px #9B904D;
+}
+
+.appointment-container {
+  background-color: #EAE3B8;
+  padding: 20px;
+  border-radius: 10px;
+  width: 35%;
+}
+
+.appointment-container h1 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  font-family: "Protest Riot";
+  opacity: 0.53;
+}
+
+.appointment-container p {
+  font-size: 1.5rem;
+  margin-bottom: 40px;
+  font-family: "Pompiere";
+}
+
+.appointment-container .form-group {
+  margin-bottom: 15px;
+}
+
+.appointment-container .form-group input {
+  padding: 15px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 40px;
+  background-color: #CFE1E5;
+  width: 100%;
+  font-family: "Poppins";
+}
+
+.appointment-container button {
+  width: 100%;
+  padding: 12px;
+  background-color: white;
+  border: none;
+  border-radius: 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  font-family: "Poppins";
+}
+
+.information{
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 120px;
+}
+
+.information a{
+  padding: 40px;
+  border-radius: 10px;
+  background-color: #EAE3B8;
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  font-family: "Potta one";
+  font-size: 1.5rem;
+}
+
+.information a img{
+  vertical-align: middle;
+}
+
+.map-image{
+  display: flex;
+  justify-content: center;
+  margin-top: 100px;
+  padding-bottom: 100px;
+}
+
+.map-image img{
+  width: 80%;
+  box-shadow: 10px 10px 0px #9B904D;
+  border-radius: 20px;
+}
+
+img[alt="CURVE IMAGE"]{
+  position: relative;
+  top: -3rem;
+  left: 3%;
+  height: 100px;
+  width: 9%;
+  z-index: 99;
+}
+
+footer{
+  position: relative;
+  z-index: 1;
+  margin-top: -101px;
+}
+
+.info{
+  display: flex;
+  justify-content: space-around;
+  background-color: #005D8D;
+}
+
+.contact{
+  margin-left: 150px;
+  margin-top: 40px;
+}
+
+.whatsapp, .email, .location{
+  display: flex;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+
+.circle-foot {
+  width: 45px; /* Adjust the size of the circle image */
+  height: 45px; /* Adjust the size of the circle image */
+  border-radius: 50%;
+  background-color: #D24259;
+  box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.3);
+}
+
+.circle-img {
+    object-fit: cover; 
+    padding: 8px;  
+}
+
+.whatsapp-content a, .email-content a, .location-content a{
+  text-decoration: none;
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.whatsapp-content p, .email-content p{
+margin-top: 8px;
+}
+
+.logo1{
+  margin-top: 20px;
+  margin-left: 300px;
+}
+
+.logo1 img{
+  width: 30%;
+  height: 150px;
+}
+
+.logo1 p{
+  padding-bottom: 20px;
+  color: white;
+  font-size: 1rem;
+  padding-right: 150px;
+  font-weight: bold;
+}
+
+.copyright{
+  background-color: black;
+  padding: 20px;
+}
+
+.copyright h6{
+  text-align: center;
+  color: white;
+}
+
+.copyright a{
+  color: royalblue;
+  text-decoration: none;
+}

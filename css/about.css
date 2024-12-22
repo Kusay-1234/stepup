@@ -1,0 +1,275 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins";
+}
+
+body{
+  overflow-x: hidden;
+}
+
+@font-face {
+  font-family: 'Abu Dhabi Pro. Condenced';
+  src: url('FontsFree-Net-Abu-Dhabi-Pro-Condenced.ttf') format('truetype');
+}
+
+.logo{
+  background-color: #6D6875;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.logo a{
+  text-decoration: none;
+  color: white;
+  text-align: center; /* Center the text inside the a tag */
+  margin: 0 auto; /* Ensure the a tag takes only the required space */
+  margin-top: 10px;
+}
+
+.logo a img{
+  vertical-align: middle;
+  height: 30px;
+  width: 30px;
+}
+
+img[alt="STEP-UP LOGO"]{
+width: 8%;
+height: 90px;
+margin-left: 50px;
+}
+
+.nav{
+  display: flex;
+  justify-content: center;
+  background-color: #FEFAE0;
+}
+
+.navbar{
+  display: flex;
+  margin-top: -30px;
+  width: 60%;
+  justify-content: center;
+  border-radius: 40px;
+  padding: 25px;
+  background-color: white;
+  box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.3);
+}
+
+.navbar li{
+  list-style: none;
+  margin: 0 25px;
+}
+
+.navbar li a{
+  text-decoration: none;
+  color: black;
+}
+
+main{
+  background-color: #FEFAE0;
+}
+
+.about-us{
+  display: flex;
+  padding-top: 100px;
+}
+
+.about-us img{
+  width: 35%;
+  height: 20%;
+  margin-right: 120px;
+}
+
+.star{
+  display: flex;
+  align-items: center;
+}
+
+.about-us-content{
+  margin-left: 80px;
+}
+
+.star h1{
+  font-size: 3rem;
+}
+
+.star img{
+  width: 10%;
+}
+
+.about-us p{
+  color: grey;
+  font-size: 0.8rem;
+  max-width: 80%;
+}
+
+.get-start{
+  display: flex;
+  margin-top: 40px;
+  background-color: #FFC958;
+  padding: 10px;
+  display: inline-flex;
+  border-radius: 15px;
+  box-shadow: 4px 4px 0px black;
+}
+
+.get-start a{
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+}
+
+img[ alt="STAR ICON"]{
+  width: 30px;  /* Adjust the image size */
+  height: auto;  /* Maintain the aspect ratio */
+  margin-right: 0;
+  vertical-align: middle;
+  margin-left: 5px;
+}
+
+img[alt="BOX WITH STAR IMAGE"]{
+  width: 100%;
+  margin-top: 80px;
+}
+
+.expert-people{
+  position: relative;
+  bottom: 5rem;
+  text-align: center;
+  color: white;
+}
+
+.expert-people h1{
+  font-weight: 400;
+  font-family: "Pompiere";
+}
+
+.expert-people h2{
+  font-family: "Poor Story";
+  font-weight: 400;
+  font-size: 1.5rem;
+  letter-spacing: 5px;
+}
+
+.get-to-known{
+  text-align: center;
+  color: #002E2B;
+}
+
+.get-to-known h1{
+  font-family: 'Abu Dhabi Pro. Condenced';
+  font-size: 2.5rem;
+  padding-bottom: 0;
+}
+
+.get-to-known h2{
+  font-size: 2rem;
+  margin-top: -25px;
+}
+
+.experts {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Creates 3 equal columns */
+  gap: 10px; /* Space between images */
+  width: 100%; /* Ensure container takes full available width */
+  padding: 10px; /* Optional padding around the grid */
+  margin-left: 40px;
+  margin-top: 40px;
+}
+
+.experts img {
+  width: 85%; /* Ensures images fill their grid area */
+  height: auto; /* Maintain aspect ratio */
+  object-fit: cover; /* Optional: Adjusts images to cover their area without distorting */
+}
+
+img[alt="CURVE IMAGE"]{
+  position: relative;
+  top: 3.5rem;
+  left: 3%;
+  height: 100px;
+  width: 9%;
+  z-index: 99;
+}
+
+footer{
+  position: relative;
+  z-index: 1;
+}
+
+.info{
+  display: flex;
+  justify-content: space-around;
+  background-color: #005D8D;
+}
+
+.contact{
+  margin-left: 150px;
+  margin-top: 40px;
+}
+
+.whatsapp, .email, .location{
+  display: flex;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+
+.circle-foot {
+  width: 45px; /* Adjust the size of the circle image */
+  height: 45px; /* Adjust the size of the circle image */
+  border-radius: 50%;
+  background-color: #D24259;
+  box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.3);
+}
+
+.circle-img {
+    object-fit: cover; 
+    padding: 8px;  
+}
+
+.whatsapp-content a, .email-content a, .location-content a{
+  text-decoration: none;
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.whatsapp-content p, .email-content p{
+margin-top: 8px;
+}
+
+.logo1{
+  margin-top: 20px;
+  margin-left: 300px;
+}
+
+.logo1 img{
+  width: 30%;
+  height: 150px;
+}
+
+.logo1 p{
+  padding-bottom: 20px;
+  color: white;
+  font-size: 1rem;
+  padding-right: 150px;
+  font-weight: bold;
+}
+
+.copyright{
+  background-color: black;
+  padding: 20px;
+}
+
+.copyright h6{
+  text-align: center;
+  color: white;
+}
+
+.copyright a{
+  color: royalblue;
+  text-decoration: none;
+}

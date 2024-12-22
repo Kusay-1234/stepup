@@ -1,0 +1,237 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins";
+}
+
+body{
+  overflow-x: hidden;
+}
+
+.logo{
+  background-color: #6D6875;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.logo a{
+  text-decoration: none;
+  color: white;
+  text-align: center; /* Center the text inside the a tag */
+  margin: 0 auto; /* Ensure the a tag takes only the required space */
+  margin-top: 10px;
+}
+
+.logo a img{
+  vertical-align: middle;
+  height: 30px;
+  width: 30px;
+}
+
+img[alt="STEP-UP LOGO"]{
+width: 8%;
+height: 90px;
+margin-left: 50px;
+}
+
+.nav{
+  display: flex;
+  justify-content: center;
+  background-color: #FEFAE0;
+}
+
+.navbar{
+  display: flex;
+  margin-top: -30px;
+  width: 60%;
+  justify-content: center;
+  border-radius: 40px;
+  padding: 25px;
+  background-color: white;
+  box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.3);
+  z-index: 1;
+}
+
+.navbar li{
+  list-style: none;
+  margin: 0 25px;
+}
+
+.navbar li a{
+  text-decoration: none;
+  color: black;
+}
+
+main{
+  background-color: #FEFAE0;
+}
+
+img[alt="Main Image"]{
+  width: 100%;
+  margin-top: -40px;
+  z-index: -1;
+}
+
+.clouds{
+  display: flex;
+  justify-content: center;
+}
+
+.clouds img{
+  width: 50%;
+  height: 200px;
+  position: absolute;
+  top: 20rem;
+}
+
+.child{
+  position: absolute;
+  top: 23rem;
+  font-size: 2.6rem;
+  color: #AD3946;
+  left: 38%;
+}
+
+.child-content{
+  position: relative;
+  bottom: 25rem;
+}
+
+#child-play, #independence, #little{
+  display: flex;
+  justify-content: center;
+}
+
+#child-play p{
+  padding: 10px 15px;
+  background-color: #6D6875;
+  color: white;
+  font-family: "Preahvihear";
+  display: inline;
+  font-size: 0.9rem;
+  max-width: 75%;
+}
+
+
+#independence p{
+  text-align: center;
+  padding: 6px 10px;
+  background-color: #6D6875;
+  color: white;
+  display: inline;
+  border-radius: 8px;
+  margin-top: 50px;
+  font-size: 0.8rem;
+}
+
+#little p{
+  background-color: #FF788C;
+  text-align: center;
+  padding: 5px 10px;
+  color: white;
+  display: inline;
+  border-radius: 8px;
+  margin-top: 4px;
+  font-size: 0.8rem;
+}
+
+.childrens-image{
+  display: flex;
+  justify-content: center;
+}
+
+.childrens-image img{
+  width: 60%;
+  margin-top: -300px;
+}
+
+img[alt="CURVE IMAGE"]{
+  position: relative;
+  top: 3.5rem;
+  left: 3%;
+  height: 100px;
+  width: 9%;
+  z-index: 99;
+}
+
+
+footer{
+  position: relative;
+  z-index: 1;
+}
+
+.info{
+  display: flex;
+  justify-content: space-around;
+  background-color: #005D8D;
+}
+
+.contact{
+  margin-left: 150px;
+  margin-top: 40px;
+}
+
+.whatsapp, .email, .location{
+  display: flex;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+
+.circle-foot {
+  width: 45px; /* Adjust the size of the circle image */
+  height: 45px; /* Adjust the size of the circle image */
+  border-radius: 50%;
+  background-color: #D24259;
+  box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.3);
+}
+
+.circle-img {
+    object-fit: cover; 
+    padding: 8px;  
+}
+
+.whatsapp-content a, .email-content a, .location-content a{
+  text-decoration: none;
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.whatsapp-content p, .email-content p{
+margin-top: 8px;
+}
+
+.logo1{
+  margin-top: 20px;
+  margin-left: 300px;
+}
+
+.logo1 img{
+  width: 30%;
+  height: 150px;
+}
+
+.logo1 p{
+  padding-bottom: 20px;
+  color: white;
+  font-size: 1rem;
+  padding-right: 150px;
+  font-weight: bold;
+}
+
+.copyright{
+  background-color: black;
+  padding: 20px;
+}
+
+.copyright h6{
+  text-align: center;
+  color: white;
+}
+
+.copyright a{
+  color: royalblue;
+  text-decoration: none;
+}

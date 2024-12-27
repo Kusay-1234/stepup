@@ -1,11 +1,11 @@
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: "Poppins";
 }
 
-body{
+body {
   overflow-x: hidden;
 }
 
@@ -14,40 +14,42 @@ body{
   src: url('FontsFree-Net-Abu-Dhabi-Pro-Condenced.ttf') format('truetype');
 }
 
-.logo{
+.logo {
   background-color: #6D6875;
   display: flex;
   justify-content: space-between;
   width: 100%;
 }
 
-.logo a{
+.logo a {
   text-decoration: none;
   color: white;
-  text-align: center; /* Center the text inside the a tag */
-  margin: 0 auto; /* Ensure the a tag takes only the required space */
+  text-align: center;
+  /* Center the text inside the a tag */
+  margin: 0 auto;
+  /* Ensure the a tag takes only the required space */
   margin-top: 10px;
 }
 
-.logo a img{
+.logo a img {
   vertical-align: middle;
   height: 30px;
   width: 30px;
 }
 
-img[alt="STEP-UP LOGO"]{
-width: 8%;
-height: 90px;
-margin-left: 50px;
+img[alt="STEP-UP LOGO"] {
+  width: 8%;
+  height: 90px;
+  margin-left: 50px;
 }
 
-.nav{
+.nav {
   display: flex;
   justify-content: center;
   background-color: #FEFAE0;
 }
 
-.navbar{
+.navbar {
   display: flex;
   margin-top: -30px;
   width: 60%;
@@ -58,55 +60,92 @@ margin-left: 50px;
   box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.3);
 }
 
-.navbar li{
+.navbar li {
   list-style: none;
   margin: 0 25px;
 }
 
-.navbar li a{
+.navbar li a {
   text-decoration: none;
   color: black;
+  position: relative;
 }
 
-main{
+/* Style for active link */
+.navbar li a.active {
+  color: black;
+  /* Ensure the text stays black */
+  padding-bottom: 5px;
+  /* Add padding to push the text away from the line */
+}
+
+.navbar li a.active::after {
+  content: '';
+  /* Empty content for the line */
+  position: absolute;
+  bottom: 0;
+  /* Position it right below the text */
+  left: 0;
+  width: 100%;
+  /* Make the line the same width as the text */
+  height: 4px;
+  /* Height of the red line */
+  border: 2px solid #D24259;
+  border-radius: 10px;
+  /* Rounded corners for the line */
+}
+
+#our {
+  transition: all 0.5s ease;
+  /* Smooth transition for hover effects */
+}
+
+#our:hover {
+  background-color: #F67682;
+  color: white;
+}
+
+
+main {
   background-color: #FEFAE0;
 }
 
-.about-us{
+.about-us {
   display: flex;
   padding-top: 100px;
 }
 
-.about-us img{
+.about-us img {
   width: 35%;
   height: 20%;
   margin-right: 120px;
 }
 
-.star{
+.star {
   display: flex;
   align-items: center;
 }
 
-.about-us-content{
+.about-us-content {
   margin-left: 80px;
 }
 
-.star h1{
+.star h1 {
   font-size: 3rem;
 }
 
-.star img{
+.star img {
   width: 10%;
+  margin-right: 0;
 }
 
-.about-us p{
+.about-us p {
   color: grey;
   font-size: 0.8rem;
   max-width: 80%;
 }
 
-.get-start{
+.get-start {
   display: flex;
   margin-top: 40px;
   background-color: #FFC958;
@@ -116,77 +155,139 @@ main{
   box-shadow: 4px 4px 0px black;
 }
 
-.get-start a{
+.get-start a {
   text-decoration: none;
   color: black;
   font-weight: bold;
 }
 
-img[ alt="STAR ICON"]{
-  width: 30px;  /* Adjust the image size */
-  height: auto;  /* Maintain the aspect ratio */
+img[ alt="STAR ICON"] {
+  width: 30px;
+  /* Adjust the image size */
+  height: auto;
+  /* Maintain the aspect ratio */
   margin-right: 0;
   vertical-align: middle;
   margin-left: 5px;
+  animation: rotateStar 3s infinite linear;
+  /* Add the rotating animation */
 }
 
-img[alt="BOX WITH STAR IMAGE"]{
+@keyframes rotateStar {
+  0% {
+    transform: rotate(0deg);
+    /* Start from the original position */
+  }
+
+  100% {
+    transform: rotate(360deg);
+    /* Rotate a full 360 degrees */
+  }
+}
+
+img[alt="BOX WITH STAR IMAGE"] {
   width: 100%;
   margin-top: 80px;
 }
 
-.expert-people{
+.expert-people {
   position: relative;
   bottom: 5rem;
   text-align: center;
   color: white;
 }
 
-.expert-people h1{
+.expert-people h1 {
   font-weight: 400;
   font-family: "Pompiere";
 }
 
-.expert-people h2{
+.expert-people h2 {
   font-family: "Poor Story";
   font-weight: 400;
   font-size: 1.5rem;
   letter-spacing: 5px;
 }
 
-.get-to-known{
+.get-to-known {
   text-align: center;
   color: #002E2B;
 }
 
-.get-to-known h1{
+.get-to-known h1 {
   font-family: 'Abu Dhabi Pro. Condenced';
   font-size: 2.5rem;
   padding-bottom: 0;
 }
 
-.get-to-known h2{
+.get-to-known h2 {
   font-size: 2rem;
   margin-top: -25px;
 }
 
 .experts {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* Creates 3 equal columns */
-  gap: 10px; /* Space between images */
-  width: 100%; /* Ensure container takes full available width */
-  padding: 10px; /* Optional padding around the grid */
-  margin-left: 40px;
+  grid-template-columns: repeat(3, 1fr);
+  /* Creates 3 equal columns */
+  gap: 10px;
+  /* Space between images */
+  width: 100%;
+  /* Ensure container takes full available width */
+  padding: 10px;
+  /* Optional padding around the grid */
   margin-top: 40px;
 }
 
 .experts img {
-  width: 85%; /* Ensures images fill their grid area */
-  height: auto; /* Maintain aspect ratio */
-  object-fit: cover; /* Optional: Adjusts images to cover their area without distorting */
+  width: 85%;
+  /* Ensures images fill their grid area */
+  height: auto;
+  /* Maintain aspect ratio */
+  object-fit: cover;
+  /* Optional: Adjusts images to cover their area without distorting */
 }
 
-img[alt="CURVE IMAGE"]{
+.expert-item {
+  position: relative;
+  /* Position the text container relative to the image */
+  overflow: hidden;
+  /* Hide overflow to ensure the text does not spill over */
+}
+
+.experts img {
+  width: 100%;
+  /* Images take full width of the parent div */
+  height: auto;
+  /* Maintain aspect ratio */
+  object-fit: cover;
+  /* Optional: Adjust images to cover their area without distorting */
+  display: block;
+  /* Removes any unwanted space below images */
+}
+
+.hover-info {
+  position: absolute;
+  /* Position the text container absolutely inside the parent */
+  top: -100%;
+  /* Initially place the text container above the image */
+  left: 0;
+  width: 100%;
+  background-color: black;
+  /* Background color of the window-like effect */
+  color: white;
+  padding: 12px;
+  border-radius: 10px;
+  text-align: center;
+  transition: top 0.4s ease;
+  /* Smooth slide-down transition */
+}
+
+.expert-item:hover .hover-info {
+  top: 0;
+  /* Move the text container into view when hovered */
+}
+
+img[alt="CURVE IMAGE"] {
   position: relative;
   top: 3.5rem;
   left: 3%;
@@ -195,63 +296,70 @@ img[alt="CURVE IMAGE"]{
   z-index: 99;
 }
 
-footer{
+footer {
   position: relative;
   z-index: 1;
 }
 
-.info{
+.info {
   display: flex;
   justify-content: space-around;
   background-color: #005D8D;
 }
 
-.contact{
+.contact {
   margin-left: 150px;
   margin-top: 40px;
 }
 
-.whatsapp, .email, .location{
+.whatsapp,
+.email,
+.location {
   display: flex;
   gap: 10px;
   margin-bottom: 30px;
 }
 
 .circle-foot {
-  width: 45px; /* Adjust the size of the circle image */
-  height: 45px; /* Adjust the size of the circle image */
+  width: 45px;
+  /* Adjust the size of the circle image */
+  height: 45px;
+  /* Adjust the size of the circle image */
   border-radius: 50%;
   background-color: #D24259;
   box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.3);
 }
 
 .circle-img {
-    object-fit: cover; 
-    padding: 8px;  
+  object-fit: cover;
+  padding: 8px;
 }
 
-.whatsapp-content a, .email-content a, .location-content a{
+.whatsapp-content a,
+.email-content a,
+.location-content a {
   text-decoration: none;
   color: white;
   font-size: 1rem;
   font-weight: bold;
 }
 
-.whatsapp-content p, .email-content p{
-margin-top: 8px;
+.whatsapp-content p,
+.email-content p {
+  margin-top: 8px;
 }
 
-.logo1{
+.logo1 {
   margin-top: 20px;
   margin-left: 300px;
 }
 
-.logo1 img{
+.logo1 img {
   width: 30%;
   height: 150px;
 }
 
-.logo1 p{
+.logo1 p {
   padding-bottom: 20px;
   color: white;
   font-size: 1rem;
@@ -259,17 +367,755 @@ margin-top: 8px;
   font-weight: bold;
 }
 
-.copyright{
+.copyright {
   background-color: black;
   padding: 20px;
 }
 
-.copyright h6{
+.copyright h6 {
   text-align: center;
   color: white;
 }
 
-.copyright a{
+.copyright a {
   color: royalblue;
   text-decoration: none;
+}
+
+
+
+
+
+/* Responsive Design */
+
+@media only screen and (min-width: 320px) and (max-width: 401px) {
+
+
+  img[alt="STEP-UP LOGO"] {
+    width: 15%;
+    height: 55px;
+    margin-left: 12px;
+  }
+
+  .logo a {
+    margin-top: 5px;
+    font-size: 0.5rem;
+  }
+
+  .logo a img {
+    height: 15px;
+    width: 15px;
+  }
+
+  .navbar {
+    margin-top: -12px;
+    width: 80%;
+    padding: 5px;
+  }
+
+  .navbar li {
+    margin: -2px 6px;
+    margin-top: -10px;
+  }
+
+  .navbar li a {
+    font-size: 0.4rem;
+  }
+}
+
+
+@media only screen and (min-width: 400px) and (max-width: 480px) {
+
+
+  img[alt="STEP-UP LOGO"] {
+    width: 15%;
+    height: 60px;
+    margin-left: 12px;
+  }
+
+  .logo a {
+    margin-top: 5px;
+    font-size: 0.5rem;
+  }
+
+  .logo a img {
+    height: 15px;
+    width: 15px;
+  }
+
+  .navbar {
+    margin-top: -12px;
+    width: 80%;
+    padding: 5px;
+  }
+
+  .navbar li {
+    margin: -2px 8px;
+    margin-top: -6px;
+  }
+
+  .navbar li a {
+    font-size: 0.5rem;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+
+  main {
+    overflow-x: hidden;
+  }
+
+  .about-us {
+    padding-top: 30px;
+  }
+
+  .about-us-content {
+    margin-left: 15px;
+  }
+
+  .star h1 {
+    font-size: 1rem;
+  }
+
+  .about-us p {
+    font-size: 0.5rem;
+  }
+
+  .get-start {
+    margin-top: 10px;
+    padding: 4px;
+    box-shadow: 2px 2px 0px black;
+  }
+
+  .get-start a {
+    font-size: 0.5rem;
+  }
+
+  .about-us img {
+    width: 42%;
+    height: 20%;
+    margin-right: 25px;
+  }
+
+  img[ alt="STAR ICON"] {
+    width: 20px;
+    margin-left: 2px;
+    height: auto;
+    margin-right: 0;
+  }
+
+  .star img {
+    width: 15%
+  }
+
+  img[alt="BOX WITH STAR IMAGE"] {
+    margin-top: 25px;
+    height: 40px;
+  }
+
+  .expert-people {
+    bottom: 2.5rem;
+  }
+
+  .expert-people h1 {
+    font-size: 0.6rem;
+  }
+
+  .expert-people h2 {
+    font-size: 0.6rem;
+    letter-spacing: 4px;
+  }
+
+  .get-to-known h1 {
+    font-size: 1.3rem;
+  }
+
+  .get-to-known h2 {
+    font-size: 1rem;
+    margin-top: -13px;
+  }
+
+  .hover-info {
+    font-size: 0.5rem;
+    padding: 5px;
+    width: 97%;
+  }
+
+  .experts {
+    margin-left: 2px;
+    margin-top: 15px;
+    padding: 5px;
+  }
+
+  img[alt="CURVE IMAGE"] {
+    top: 0rem;
+    left: 2%;
+    height: 50px;
+    width: 10%;
+  }
+
+  footer {
+    margin-top: -30px;
+  }
+
+  .contact {
+    margin-left: 10px;
+    margin-top: 40px;
+  }
+
+  .whatsapp,
+  .email,
+  .location {
+    margin-bottom: 15px;
+  }
+
+  .circle-foot {
+    width: 30px;
+    height: 30px;
+  }
+
+  .circle-img {
+    padding: 6px;
+    height: 30px;
+    width: 30px;
+  }
+
+  .whatsapp-content a,
+  .email-content a,
+  .location-content a {
+    font-size: 0.6rem;
+  }
+
+  .logo1 {
+    margin-left: 40px;
+  }
+
+  .logo1 img {
+    width: 40%;
+    height: auto;
+  }
+
+  .logo1 p {
+    font-size: 0.6rem;
+    padding-right: 10px;
+    margin-bottom: 10px;
+  }
+
+  .copyright h6 {
+    font-size: 0.5rem;
+  }
+
+}
+
+@media only screen and (min-width: 481px) and (max-width: 600px) {
+
+
+  img[alt="STEP-UP LOGO"] {
+    width: 12%;
+    height: 55px;
+    margin-left: 12px;
+  }
+
+  .logo a {
+    margin-top: 5px;
+    font-size: 0.5rem;
+  }
+
+  .logo a img {
+    height: 15px;
+    width: 15px;
+  }
+
+  .navbar {
+    margin-top: -12px;
+    width: 80%;
+    padding: 5px;
+  }
+
+  .navbar li {
+    margin: -2px 15px;
+    margin-top: -10px;
+  }
+
+  .navbar li a {
+    font-size: 0.5rem;
+  }
+}
+
+
+@media only screen and (min-width: 601px) and (max-width: 767px) {
+
+
+  img[alt="STEP-UP LOGO"] {
+    width: 12%;
+    height: 65px;
+    margin-left: 12px;
+  }
+
+  .logo a {
+    margin-top: 5px;
+    font-size: 0.5rem;
+  }
+
+  .logo a img {
+    height: 15px;
+    width: 15px;
+  }
+
+  .navbar {
+    margin-top: -12px;
+    width: 80%;
+    padding: 10px;
+  }
+
+  .navbar li {
+    margin: -2px 20px;
+    margin-top: -6px;
+  }
+
+  .navbar li a {
+    font-size: 0.6rem;
+  }
+}
+
+@media only screen and (min-width: 481px) and (max-width: 767px) {
+
+  main {
+    overflow-x: hidden;
+  }
+
+  .about-us {
+    padding-top: 40px;
+  }
+
+  .about-us-content {
+    margin-left: 15px;
+  }
+
+  .star h1 {
+    font-size: 1.5rem;
+  }
+
+  .about-us p {
+    font-size: 0.6rem;
+  }
+
+  .get-start {
+    margin-top: 15px;
+    padding: 8px;
+    box-shadow: 2px 2px 0px black;
+  }
+
+  .get-start a {
+    font-size: 0.6rem;
+  }
+
+  .about-us img {
+    width: 45%;
+    margin-right: 25px;
+  }
+
+  img[ alt="STAR ICON"] {
+    width: 25px;
+    margin-left: 2px;
+    height: auto;
+    margin-right: 0;
+  }
+
+  .star img {
+    width: 15%
+  }
+
+  img[alt="BOX WITH STAR IMAGE"] {
+    margin-top: 30px;
+    height: 50px;
+  }
+
+  .expert-people {
+    bottom: 3rem;
+  }
+
+  .expert-people h1 {
+    font-size: 0.8rem;
+  }
+
+  .expert-people h2 {
+    font-size: 0.8rem;
+    letter-spacing: 4px;
+  }
+
+  .get-to-known h1 {
+    font-size: 1.5rem;
+  }
+
+  .get-to-known h2 {
+    font-size: 1.3rem;
+    margin-top: -13px;
+  }
+
+  .experts {
+    margin-left: 2px;
+    margin-top: 15px;
+    padding: 5px;
+  }
+
+  .hover-info {
+    font-size: 0.5rem;
+    padding: 5px;
+    width: 97%;
+  }
+
+  footer {
+    margin-top: -30px;
+  }
+
+  .contact {
+    margin-left: 10px;
+    margin-top: 40px;
+  }
+
+  .whatsapp,
+  .email,
+  .location {
+    margin-bottom: 15px;
+  }
+
+  .circle-foot {
+    width: 30px;
+    height: 30px;
+  }
+
+  .circle-img {
+    padding: 6px;
+    height: 30px;
+    width: 30px;
+  }
+
+  .whatsapp-content a,
+  .email-content a,
+  .location-content a {
+    font-size: 0.6rem;
+  }
+
+  .logo1 {
+    margin-left: 90px;
+  }
+
+  .logo1 img {
+    width: 25%;
+    height: auto;
+  }
+
+  .logo1 p {
+    font-size: 0.6rem;
+    padding-right: 70px;
+    margin-bottom: 10px;
+  }
+
+  img[alt="CURVE IMAGE"] {
+    top: 0rem;
+    left: 2%;
+    height: 50px;
+    width: 10%;
+  }
+
+  .copyright h6 {
+    font-size: 0.5rem;
+  }
+
+}
+
+@media only screen and (min-width: 600px) and (max-width: 767px) {
+
+  img[alt="CURVE IMAGE"] {
+    width: 8%;
+  }
+
+}
+
+
+
+
+@media only screen and (min-width: 768px) and (max-width: 900px) {
+
+
+  img[alt="STEP-UP LOGO"] {
+    width: 8%;
+    height: 65px;
+    margin-left: 12px;
+  }
+
+  .logo a {
+    margin-top: 8px;
+    font-size: 0.6rem;
+  }
+
+  .logo a img {
+    height: 20px;
+    width: 20px;
+  }
+
+  .navbar {
+    margin-top: -12px;
+    width: 72%;
+    padding: 15px;
+  }
+
+  .navbar li {
+    margin: -2px 22px;
+    margin-top: -10px;
+  }
+
+  .navbar li a {
+    font-size: 0.7rem;
+  }
+}
+
+
+@media only screen and (min-width: 901px) and (max-width: 1024px) {
+
+
+  img[alt="STEP-UP LOGO"] {
+    width: 8%;
+    height: 65px;
+    margin-left: 12px;
+  }
+
+  .logo a {
+    margin-top: 5px;
+    font-size: 0.7rem;
+  }
+
+  .logo a img {
+    height: 20px;
+    width: 20px;
+  }
+
+  .navbar {
+    margin-top: -18px;
+    width: 68%;
+    padding: 15px;
+  }
+
+  .navbar li {
+    margin: -2px 25px;
+    margin-top: -6px;
+  }
+
+  .navbar li a {
+    font-size: 0.7rem;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+
+  main {
+    overflow-x: hidden;
+  }
+
+  .about-us {
+    padding-top: 40px;
+  }
+
+  .about-us-content {
+    margin-left: 40px;
+    margin-top: 40px;
+  }
+
+  .star h1 {
+    font-size: 2rem;
+  }
+
+  .about-us p {
+    font-size: 0.7rem;
+  }
+
+  .get-start {
+    margin-top: 25px;
+    padding: 10px;
+    box-shadow: 2px 2px 0px black;
+  }
+
+  .get-start a {
+    font-size: 0.8rem;
+  }
+
+  .about-us img {
+    width: 55%;
+    margin-right: 30px;
+    height: 350px;
+  }
+
+  img[ alt="STAR ICON"] {
+    width: 30px;
+    margin-left: 2px;
+    height: auto;
+    margin-right: 0;
+  }
+
+  .star img {
+    width: 15%;
+    height: auto;
+  }
+
+  img[alt="BOX WITH STAR IMAGE"] {
+    margin-top: 30px;
+    height: 70px;
+  }
+
+  .expert-people {
+    bottom: 4rem;
+  }
+
+  .expert-people h1 {
+    font-size: 1.3rem;
+  }
+
+  .expert-people h2 {
+    font-size: 1.3rem;
+    letter-spacing: 5px;
+  }
+
+  .get-to-known h1 {
+    font-size: 2rem;
+  }
+
+  .get-to-known h2 {
+    font-size: 1.8rem;
+    margin-top: -22px;
+  }
+
+  .experts {
+    margin-left: 5px;
+    margin-top: 15px;
+    padding: 5px;
+  }
+
+  .hover-info {
+    font-size: 0.7rem;
+    padding: 6px;
+    width: 97%;
+  }
+
+  footer {
+    margin-top: -30px;
+  }
+
+  .contact {
+    margin-left: 70px;
+    margin-top: 40px;
+  }
+
+  .whatsapp,
+  .email,
+  .location {
+    margin-bottom: 15px;
+  }
+
+  .circle-foot {
+    width: 35px;
+    height: 35px;
+  }
+
+  .circle-img {
+    padding: 6px;
+    height: 35px;
+    width: 35px;
+  }
+
+  .whatsapp-content a,
+  .email-content a,
+  .location-content a {
+    font-size: 0.8rem;
+  }
+
+  .logo1 {
+    margin-left: 120px;
+  }
+
+  .logo1 img {
+    width: 25%;
+    height: auto;
+  }
+
+  .logo1 p {
+    font-size: 0.8rem;
+    padding-right: 70px;
+    margin-bottom: 10px;
+  }
+
+  img[alt="CURVE IMAGE"] {
+    top: 0rem;
+    left: 3%;
+    height: 50px;
+    width: 6%;
+  }
+
+  .copyright h6 {
+    font-size: 0.6rem;
+  }
+
+}
+
+
+
+@media only screen and (min-width: 1025px) and (max-width: 1200px) {
+
+  .navbar {
+    padding: 10px;
+  }
+
+  .navbar li {
+    margin: 0 22px;
+  }
+
+  .navbar li a {
+    font-size: 0.8rem;
+  }
+
+  img[alt="CURVE IMAGE"] {
+    top: 2.5rem;
+    left: 2%;
+    height: 70px;
+    width: 7%;
+  }
+
+  .expert-people {
+    bottom: 4.2rem;
+  }
+
+  .experts {
+    margin-left: 6px;
+  }
+
+  .hover-info {
+    width: 97%;
+  }
+
+  .logo1 {
+    margin-left: 110px;
+  }
+
+}
+
+
+@media only screen and (min-width: 1440px) {
+
+  .logo1 img {
+    width: 20%;
+    height: auto;
+  }
+
+  .expert-people {
+    bottom: 6rem;
+  }
+
+  .experts {
+    margin-left: 10px;
+  }
+
+  img[alt="CURVE IMAGE"] {
+    height: 120px;
+    width: 5%;
+  }
 }

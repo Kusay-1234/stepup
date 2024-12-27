@@ -61,6 +61,33 @@ margin-left: 50px;
 .navbar li a{
   text-decoration: none;
   color: black;
+  position: relative;
+}
+
+/* Style for active link */
+.navbar li a.active {
+  color: black; /* Ensure the text stays black */
+  padding-bottom: 5px; /* Add padding to push the text away from the line */
+}
+
+.navbar li a.active::after {
+  content: ''; /* Empty content for the line */
+  position: absolute;
+  bottom: 0; /* Position it right below the text */
+  left: 0;
+  width: 100%; /* Make the line the same width as the text */
+  height: 4px; /* Height of the red line */
+  border: 2px solid #D24259;
+  border-radius: 10px; /* Rounded corners for the line */
+}
+
+#our{
+  transition: all 0.5s ease; /* Smooth transition for hover effects */
+}
+
+#our:hover{
+  background-color: #F67682;
+  color: white;
 }
 
 main{
@@ -204,6 +231,31 @@ img[alt="Second Image"]{
 }
 
 
+.navigation-arrows {
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+}
+
+.circle-arrow {
+  display: inline-block;
+  width: 50px;        /* Size of the circle */
+  height: 50px;       /* Size of the circle */
+  border-radius: 50%; /* Makes the element circular */
+  background-color: black; /* Background color of the circle */
+  color: white;       /* Arrow color */
+  font-size: 30px;    /* Arrow size */
+  text-align: center; /* Center the ">" symbol inside the circle */
+  line-height: 50px;  
+  text-decoration: none; /* Remove underline from the link */
+  transition: background-color 0.3s;
+}
+
+.circle-arrow:hover {
+  background-color: #9B904D; /* Darker color on hover */
+}
+
+
 img[alt="CURVE IMAGE"]{
   position: relative;
   top: 3.5rem;
@@ -291,4 +343,778 @@ margin-top: 8px;
 .copyright a{
   color: royalblue;
   text-decoration: none;
+}
+
+
+
+
+
+
+/* Responsive Design */
+
+@media only screen and (min-width: 320px) and (max-width: 401px){
+
+
+  img[alt="STEP-UP LOGO"] {
+    width: 15%;
+    height: 55px;
+    margin-left: 12px;
+  }
+  
+  .logo a{
+    margin-top: 5px;
+    font-size: 0.5rem;
+  }
+  
+  .logo a img{
+    height: 15px;
+    width: 15px;
+  }
+  
+  .navbar {
+    margin-top: -12px;
+    width: 80%;
+    padding: 5px;
+  }
+  
+  .navbar li {
+    margin: -2px 6px;
+    margin-top: -10px;
+  }
+  
+  .navbar li a{
+    font-size: 0.4rem;
+  }
+  }
+  
+
+@media only screen and (min-width: 400px) and (max-width: 480px){
+
+
+img[alt="STEP-UP LOGO"] {
+  width: 15%;
+  height: 60px;
+  margin-left: 12px;
+}
+
+.logo a{
+  margin-top: 5px;
+  font-size: 0.5rem;
+}
+
+.logo a img{
+  height: 15px;
+  width: 15px;
+}
+
+.navbar {
+  margin-top: -12px;
+  width: 80%;
+  padding: 5px;
+}
+
+.navbar li {
+  margin: -2px 8px;
+  margin-top: -6px;
+}
+
+.navbar li a{
+  font-size: 0.5rem;
+}
+}
+
+@media only screen and (max-width: 480px){
+
+  main{
+    overflow-x: hidden;
+  }
+
+  #content{
+    padding: 20px 60px;
+    font-size: 0.5rem;
+  }
+
+  .clouds img{
+    height: auto;
+  }
+
+.early {
+    bottom: 3.5rem;
+    font-size: 0.6rem;
+    left: 35%;
+}
+
+img[alt="First Image"] {
+top: 5rem;
+left: 2%;
+}
+
+#parent p {
+  padding: 5px 15px;
+  font-size: 0.5rem;
+  max-width: 90%;
+}
+
+.age li {
+  font-size: 0.7rem;
+  margin-top: 8px;
+  margin-right: 40px;
+}
+
+#independence p {
+  padding: 4px 5px;
+  margin-top: 30px;
+  font-size: 0.5rem;
+}
+
+#develop p {
+  padding: 4px 5px;
+  font-size: 0.5rem;
+}
+
+#little p {
+  padding: 4px 5px;
+  font-size: 0.5rem;
+}
+
+.child-interest p {
+  max-width: 95%;
+  font-size: 0.5rem;
+}
+
+.approach p{
+  margin-right: 0px;
+font-size: 0.5rem;
+margin-left: 8px;
+}
+
+.intervention{
+  margin-bottom: -50px;
+}
+
+.intervention li {
+  font-size: 0.5rem;
+  margin-top: 10px;
+  margin-right: 10px;
+}
+
+img[alt="Second Image"] {
+  width: 12%;
+  bottom: 1rem;
+  left: 85%;
+}
+
+img[alt="CURVE IMAGE"] {
+  top: 0rem;
+  left: 2%;
+  height: 50px;
+  width: 10%;
+}
+
+footer{
+  margin-top: -30px;
+}
+
+.contact {
+  margin-left: 10px;
+  margin-top: 40px;
+}
+
+.whatsapp, .email, .location {
+  margin-bottom: 15px;
+}
+
+.circle-foot {
+  width: 30px;
+  height: 30px;
+}
+
+.circle-img{
+  padding: 6px;
+    height: 30px;
+    width: 30px;
+}
+
+.whatsapp-content a, .email-content a, .location-content a{
+  font-size: 0.6rem;
+}
+
+.logo1{
+  margin-left: 40px;
+}
+
+.logo1 img{
+  width: 40%;
+  height: auto;
+}
+
+.logo1 p{
+    font-size: 0.6rem;
+    padding-right: 10px;
+    margin-bottom: 10px;
+}
+
+.copyright h6{
+  font-size: 0.5rem;
+}
+
+.navigation-arrows{
+  margin-top: 0;
+}
+
+.circle-arrow{
+  width: 30px;
+  height: 30px;
+  font-size: 25px;
+  line-height: 30px;
+}
+
+}
+
+
+
+
+@media only screen and (min-width: 481px) and (max-width: 600px){
+
+  img[alt="STEP-UP LOGO"] {
+    width: 12%;
+    height: 55px;
+    margin-left: 12px;
+  }
+  
+  .logo a{
+    margin-top: 5px;
+    font-size: 0.5rem;
+  }
+  
+  .logo a img{
+    height: 15px;
+    width: 15px;
+  }
+  
+  .navbar {
+    margin-top: -12px;
+    width: 80%;
+    padding: 5px;
+  }
+  
+  .navbar li {
+    margin: -2px 15px;
+    margin-top: -10px;
+  }
+  
+  .navbar li a{
+    font-size: 0.5rem;
+  }
+  }
+  
+
+@media only screen and (min-width: 601px) and (max-width: 767px){
+
+
+img[alt="STEP-UP LOGO"] {
+  width: 12%;
+  height: 65px;
+  margin-left: 12px;
+}
+
+.logo a{
+  margin-top: 5px;
+  font-size: 0.5rem;
+}
+
+.logo a img{
+  height: 15px;
+  width: 15px;
+}
+
+.navbar {
+  margin-top: -12px;
+  width: 80%;
+  padding: 10px;
+}
+
+.navbar li {
+  margin: -2px 20px;
+  margin-top: -6px;
+}
+
+.navbar li a{
+  font-size: 0.6rem;
+}
+}
+
+@media only screen and (min-width: 481px) and (max-width: 767px){
+
+  main{
+    overflow-x: hidden;
+  }
+
+  #content{
+    padding: 20px 80px;
+    font-size: 0.7rem;
+  }
+
+  .clouds img{
+    height: auto;
+  }
+
+.early {
+    bottom: 4.5rem;
+    font-size: 1rem;
+    left: 29%;
+}
+
+img[alt="First Image"] {
+top: 6rem;
+left: 3%;
+}
+
+#parent p {
+  padding: 5px 15px;
+  font-size: 0.6rem;
+  max-width: 90%;
+}
+
+.age li {
+  font-size: 0.8rem;
+  margin-top: 8px;
+  margin-right: 40px;
+}
+
+#independence p {
+  padding: 4px 5px;
+  margin-top: 30px;
+  font-size: 0.6rem;
+}
+
+#develop p {
+  padding: 4px 5px;
+  font-size: 0.6rem;
+}
+
+#little p {
+  padding: 4px 5px;
+  font-size: 0.6rem;
+}
+
+.child-interest p {
+  max-width: 95%;
+  font-size: 0.6rem;
+}
+
+.approach p{
+  margin-right: 0px;
+font-size: 0.6rem;
+margin-left: 8px;
+}
+
+.intervention{
+  margin-bottom: -50px;
+}
+
+.intervention li {
+  font-size: 0.6rem;
+  margin-top: 10px;
+  margin-right: 10px;
+}
+
+img[alt="Second Image"] {
+  width: 12%;
+  bottom: 1rem;
+  left: 85%;
+}
+
+
+footer{
+  margin-top: -30px;
+}
+
+.contact {
+  margin-left: 10px;
+  margin-top: 40px;
+}
+
+.whatsapp, .email, .location {
+  margin-bottom: 15px;
+}
+
+.circle-foot {
+  width: 30px;
+  height: 30px;
+}
+
+.circle-img{
+  padding: 6px;
+    height: 30px;
+    width: 30px;
+}
+
+.whatsapp-content a, .email-content a, .location-content a{
+  font-size: 0.6rem;
+}
+
+.logo1{
+  margin-left: 90px;
+}
+
+.logo1 img{
+  width: 25%;
+  height: auto;
+}
+
+.logo1 p{
+    font-size: 0.6rem;
+    padding-right: 70px;
+    margin-bottom: 10px;
+}
+
+img[alt="CURVE IMAGE"] {
+  top: 0rem;
+  left: 2%;
+  height: 50px;
+  width: 10%;
+}
+
+.copyright h6{
+  font-size: 0.5rem;
+}
+
+
+.navigation-arrows{
+  margin-top: 0;
+}
+
+.circle-arrow{
+  width: 30px;
+  height: 30px;
+  font-size: 25px;
+  line-height: 30px;
+}
+
+}
+
+
+@media only screen and (min-width: 600px) and (max-width: 767px) {
+
+  .early {
+    bottom: 6.5rem;
+    font-size: 1rem;
+    left: 33%;
+}
+
+img[alt="First Image"] {
+  left: 1%;
+  width: 10%;
+}
+
+img[alt="CURVE IMAGE"] {
+  width: 8%;
+}
+  
+}
+
+
+
+@media only screen and (min-width: 768px) and (max-width: 900px){
+
+
+  img[alt="STEP-UP LOGO"] {
+    width: 8%;
+    height: 65px;
+    margin-left: 12px;
+  }
+  
+  .logo a{
+    margin-top: 8px;
+    font-size: 0.6rem;
+  }
+  
+  .logo a img{
+    height: 20px;
+    width: 20px;
+  }
+  
+  .navbar {
+    margin-top: -12px;
+    width: 72%;
+    padding: 15px;
+  }
+  
+  .navbar li {
+    margin: -2px 22px;
+    margin-top: -10px;
+  }
+  
+  .navbar li a{
+    font-size: 0.7rem;
+  }
+  }
+  
+
+@media only screen and (min-width: 901px) and (max-width: 1024px){
+
+
+img[alt="STEP-UP LOGO"] {
+  width: 8%;
+  height: 65px;
+  margin-left: 12px;
+}
+
+.logo a{
+  margin-top: 5px;
+  font-size: 0.7rem;
+}
+
+.logo a img{
+  height: 20px;
+  width: 20px;
+}
+
+.navbar {
+  margin-top: -18px;
+  width: 68%;
+  padding: 15px;
+}
+
+.navbar li {
+  margin: -2px 25px;
+  margin-top: -6px;
+}
+
+.navbar li a{
+  font-size: 0.7rem;
+}
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px){
+
+  main{
+    overflow-x: hidden;
+  }
+
+  #content{
+    padding: 20px 120px;
+    font-size: 0.8rem;
+  }
+
+  .clouds img{
+    height: auto;
+  }
+
+.early {
+    bottom: 7rem;
+    font-size: 1.5rem;
+    left: 31%;
+}
+
+img[alt="First Image"] {
+top: 6rem;
+left: 3%;
+width: 9%;
+}
+
+#parent p {
+  padding: 5px 15px;
+  font-size: 0.7rem;
+  max-width: 90%;
+}
+
+.age li {
+  font-size: 0.9rem;
+  margin-top: 8px;
+  margin-right: 40px;
+}
+
+#independence p {
+  padding: 4px 5px;
+  margin-top: 30px;
+  font-size: 0.7rem;
+}
+
+#develop p {
+  padding: 4px 5px;
+  font-size: 0.7rem;
+}
+
+#little p {
+  padding: 4px 5px;
+  font-size: 0.7rem;
+}
+
+.child-interest p {
+  max-width: 95%;
+  font-size: 0.7rem;
+}
+
+.approach p{
+  margin-right: 0px;
+font-size: 0.7rem;
+margin-left: 8px;
+}
+
+.intervention{
+  margin-bottom: -50px;
+}
+
+.intervention li {
+  font-size: 0.7rem;
+  margin-top: 10px;
+  margin-right: 10px;
+}
+
+img[alt="Second Image"] {
+  width: 10%;
+  bottom: 1rem;
+  left: 85%;
+}
+
+
+footer{
+  margin-top: -30px; 
+ }
+ 
+ .contact {
+   margin-left: 70px;
+   margin-top: 40px;
+ }
+ 
+ .whatsapp, .email, .location {
+   margin-bottom: 15px;
+ }
+ 
+ .circle-foot {
+   width: 35px;
+   height: 35px;
+ }
+ 
+ .circle-img{
+   padding: 6px;
+     height: 35px;
+     width: 35px;
+ }
+ 
+ .whatsapp-content a, .email-content a, .location-content a{
+   font-size: 0.8rem;
+ }
+ 
+ .logo1{
+   margin-left: 120px;
+ }
+ 
+ .logo1 img{
+   width: 25%;
+   height: auto;
+ }
+ 
+ .logo1 p{
+     font-size: 0.8rem;
+     padding-right: 70px;
+     margin-bottom: 10px;
+ }
+ 
+ img[alt="CURVE IMAGE"] {
+   top: 0rem;
+   left: 3%;
+   height: 50px;
+   width: 6%;
+ }
+ 
+ .copyright h6{
+   font-size: 0.6rem;
+ }
+
+ .navigation-arrows{
+  margin-top: 0;
+}
+
+.circle-arrow{
+  width: 35px;
+  height: 35px;
+  font-size: 28px;
+  line-height: 35px;
+}
+
+}
+
+
+@media only screen and (min-width: 900px) and (max-width: 1024px){
+  .early {
+    bottom: 9rem;
+    font-size: 1.5rem;
+    left: 35%;
+}
+}
+
+
+@media only screen and (min-width: 1025px) and (max-width: 1200px) {
+
+  .navbar {
+    padding: 10px;
+  }
+
+  .navbar li {
+    margin: 0 22px;
+  }
+
+  .navbar li a {
+    font-size: 0.8rem;
+  }
+
+  img[alt="CURVE IMAGE"] {
+    top: 2.5rem;
+    left: 2%;
+    height: 70px;
+    width: 7%;
+  }
+
+  .early{
+    font-size: 2rem;
+  }
+
+  img[alt="Second Image"] {
+    left: 87%;
+  }
+
+  .logo1 {
+    margin-left: 110px;
+  }
+
+  .navigation-arrows{
+    margin-top: 90px;
+  }
+
+}
+
+
+@media only screen and (min-width: 1440px) {
+
+ .logo1 img {
+  width: 20%;
+  height: auto;
+}
+
+.clouds img{
+  height: 350px;
+}
+
+.early{
+  bottom: 16rem;
+  left: 39%;
+}
+
+img[alt="First Image"] {
+  width: 7%;
+  left: 1%;
+}
+
+img[alt="Second Image"] {
+  width: 7%;
+  left: 92%;
+}
+
+img[alt="CURVE IMAGE"] {
+  height: 120px;
+  width: 5%;
+}
 }

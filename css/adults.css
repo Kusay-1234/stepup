@@ -61,7 +61,35 @@ margin-left: 50px;
 .navbar li a{
   text-decoration: none;
   color: black;
+  position: relative;
 }
+
+/* Style for active link */
+.navbar li a.active {
+  color: black; /* Ensure the text stays black */
+  padding-bottom: 5px; /* Add padding to push the text away from the line */
+}
+
+.navbar li a.active::after {
+  content: ''; /* Empty content for the line */
+  position: absolute;
+  bottom: 0; /* Position it right below the text */
+  left: 0;
+  width: 100%; /* Make the line the same width as the text */
+  height: 4px; /* Height of the red line */
+  border: 2px solid #D24259;
+  border-radius: 10px; /* Rounded corners for the line */
+}
+
+#our{
+  transition: all 0.5s ease; /* Smooth transition for hover effects */
+}
+
+#our:hover{
+  background-color: #F67682;
+  color: white;
+}
+
 
 main{
   background-color: #FEFAE0;
@@ -139,6 +167,30 @@ main{
 .build-hobby-content li{
   font-family: "Poor Story";
   font-size: 1.3rem;
+}
+
+.navigation-arrows {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.circle-arrow {
+  display: inline-block;
+  width: 50px;        /* Size of the circle */
+  height: 50px;       /* Size of the circle */
+  border-radius: 50%; /* Makes the element circular */
+  background-color: black; /* Background color of the circle */
+  color: white;       /* Arrow color */
+  font-size: 30px;    /* Arrow size */
+  text-align: center; /* Center the ">" symbol inside the circle */
+  line-height: 50px;  
+  text-decoration: none; /* Remove underline from the link */
+  transition: background-color 0.3s;
+}
+
+.circle-arrow:hover {
+  background-color: #9B904D; /* Darker color on hover */
 }
 
 
@@ -229,4 +281,673 @@ margin-top: 8px;
 .copyright a{
   color: royalblue;
   text-decoration: none;
+}
+
+
+
+
+/* Responsive Design */
+
+@media only screen and (min-width: 320px) and (max-width: 401px){
+
+
+  img[alt="STEP-UP LOGO"] {
+    width: 15%;
+    height: 55px;
+    margin-left: 12px;
+  }
+  
+  .logo a{
+    margin-top: 5px;
+    font-size: 0.5rem;
+  }
+  
+  .logo a img{
+    height: 15px;
+    width: 15px;
+  }
+  
+  .navbar {
+    margin-top: -12px;
+    width: 80%;
+    padding: 5px;
+  }
+  
+  .navbar li {
+    margin: -2px 6px;
+    margin-top: -10px;
+  }
+  
+  .navbar li a{
+    font-size: 0.4rem;
+  }
+  }
+  
+
+@media only screen and (min-width: 400px) and (max-width: 480px){
+
+
+img[alt="STEP-UP LOGO"] {
+  width: 15%;
+  height: 60px;
+  margin-left: 12px;
+}
+
+.logo a{
+  margin-top: 5px;
+  font-size: 0.5rem;
+}
+
+.logo a img{
+  height: 15px;
+  width: 15px;
+}
+
+.navbar {
+  margin-top: -12px;
+  width: 80%;
+  padding: 5px;
+}
+
+.navbar li {
+  margin: -2px 8px;
+  margin-top: -6px;
+}
+
+.navbar li a{
+  font-size: 0.5rem;
+}
+}
+
+@media only screen and (max-width: 480px){
+
+  main{
+    overflow-x: hidden;
+  }
+  
+.clouds img {
+  width: 50%;
+  height: auto;
+  position: relative;
+  top: 2rem;
+}
+
+.adult{
+  bottom: 1.5rem;
+  font-size: 0.6rem;
+  left: 43%;
+}
+
+#content {
+  padding: 25px 40px;
+  font-size: 0.6rem;
+}
+
+#young-people p {
+  padding: 5px 8px;
+  font-size: 0.5rem;
+  max-width: 90%;
+  margin-top: 5px;
+}
+
+.build-hobby{
+  margin-top: 30px;
+}
+
+.build-hobby-content{
+  margin-left: 10px;
+}
+
+.build-hobby-content p {
+  padding: 5px;
+  font-size: 0.8rem;
+}
+
+.build-hobby-content ul {
+  padding-top: 10px;
+  margin-left: 25px;
+}
+
+.build-hobby-content li {
+  font-size: 0.8rem;
+}
+
+img[alt="CURVE IMAGE"] {
+  top: 0rem;
+  left: 2%;
+  height: 50px;
+  width: 10%;
+}
+
+footer{
+  margin-top: -30px;
+}
+
+
+.contact {
+  margin-left: 10px;
+  margin-top: 40px;
+}
+
+.whatsapp, .email, .location {
+  margin-bottom: 15px;
+}
+
+.circle-foot {
+  width: 30px;
+  height: 30px;
+}
+
+.circle-img{
+  padding: 6px;
+    height: 30px;
+    width: 30px;
+}
+
+.whatsapp-content a, .email-content a, .location-content a{
+  font-size: 0.6rem;
+}
+
+.logo1{
+  margin-left: 40px;
+}
+
+.logo1 img{
+  width: 40%;
+  height: auto;
+}
+
+.logo1 p{
+    font-size: 0.6rem;
+    padding-right: 10px;
+    margin-bottom: 10px;
+}
+
+.copyright h6{
+  font-size: 0.5rem;
+}
+
+.navigation-arrows{
+  margin-top: 10px;
+}
+
+.circle-arrow{
+  width: 30px;
+  height: 30px;
+  font-size: 25px;
+  line-height: 30px;
+}
+
+}
+
+
+
+@media only screen and (min-width: 481px) and (max-width: 600px){
+
+  img[alt="STEP-UP LOGO"] {
+    width: 12%;
+    height: 55px;
+    margin-left: 12px;
+  }
+  
+  .logo a{
+    margin-top: 5px;
+    font-size: 0.5rem;
+  }
+  
+  .logo a img{
+    height: 15px;
+    width: 15px;
+  }
+  
+  .navbar {
+    margin-top: -12px;
+    width: 80%;
+    padding: 5px;
+  }
+  
+  .navbar li {
+    margin: -2px 15px;
+    margin-top: -10px;
+  }
+  
+  .navbar li a{
+    font-size: 0.5rem;
+  }
+  }
+  
+
+@media only screen and (min-width: 601px) and (max-width: 767px){
+
+
+img[alt="STEP-UP LOGO"] {
+  width: 12%;
+  height: 65px;
+  margin-left: 12px;
+}
+
+.logo a{
+  margin-top: 5px;
+  font-size: 0.5rem;
+}
+
+.logo a img{
+  height: 15px;
+  width: 15px;
+}
+
+.navbar {
+  margin-top: -12px;
+  width: 80%;
+  padding: 10px;
+}
+
+.navbar li {
+  margin: -2px 20px;
+  margin-top: -6px;
+}
+
+.navbar li a{
+  font-size: 0.6rem;
+}
+}
+
+@media only screen and (min-width: 481px) and (max-width: 767px){
+
+  main{
+    overflow-x: hidden;
+  }
+  
+.clouds img {
+  width: 50%;
+  height: auto;
+  position: relative;
+  top: 2rem;
+}
+
+.adult{
+  bottom: 2.5rem;
+  font-size: 1rem;
+  left: 42%;
+}
+
+#content {
+  padding: 25px 40px;
+  font-size: 0.7rem;
+}
+
+#young-people p {
+  padding: 5px 8px;
+  font-size: 0.6rem;
+  max-width: 90%;
+  margin-top: 5px;
+}
+
+.build-hobby{
+  margin-top: 30px;
+}
+
+.build-hobby-content{
+  margin-left: 10px;
+}
+
+.build-hobby-content p {
+  padding: 5px;
+  font-size: 0.9rem;
+}
+
+.build-hobby-content ul {
+  padding-top: 10px;
+  margin-left: 25px;
+}
+
+.build-hobby-content li {
+  font-size: 0.9rem;
+}
+
+footer{
+  margin-top: -30px;
+}
+
+.contact {
+  margin-left: 10px;
+  margin-top: 40px;
+}
+
+.whatsapp, .email, .location {
+  margin-bottom: 15px;
+}
+
+.circle-foot {
+  width: 30px;
+  height: 30px;
+}
+
+.circle-img{
+  padding: 6px;
+    height: 30px;
+    width: 30px;
+}
+
+.whatsapp-content a, .email-content a, .location-content a{
+  font-size: 0.6rem;
+}
+
+.logo1{
+  margin-left: 90px;
+}
+
+.logo1 img{
+  width: 25%;
+  height: auto;
+}
+
+.logo1 p{
+    font-size: 0.6rem;
+    padding-right: 70px;
+    margin-bottom: 10px;
+}
+
+img[alt="CURVE IMAGE"] {
+  top: 0rem;
+  left: 2%;
+  height: 50px;
+  width: 10%;
+}
+
+.copyright h6{
+  font-size: 0.5rem;
+}
+
+.navigation-arrows{
+  margin-top: 10px;
+}
+
+.circle-arrow{
+  width: 30px;
+  height: 30px;
+  font-size: 25px;
+  line-height: 30px;
+}
+
+
+}
+
+@media only screen and (min-width: 600px) and (max-width: 767px) {
+
+  img[alt="CURVE IMAGE"] {
+    width: 8%;
+  }
+
+  .adult {
+    bottom: 4.5rem;
+    font-size: 1rem;
+    left: 44%;
+  }
+  
+  }
+
+
+  
+@media only screen and (min-width: 768px) and (max-width: 900px){
+
+
+  img[alt="STEP-UP LOGO"] {
+    width: 8%;
+    height: 65px;
+    margin-left: 12px;
+  }
+  
+  .logo a{
+    margin-top: 8px;
+    font-size: 0.6rem;
+  }
+  
+  .logo a img{
+    height: 20px;
+    width: 20px;
+  }
+  
+  .navbar {
+    margin-top: -12px;
+    width: 72%;
+    padding: 15px;
+  }
+  
+  .navbar li {
+    margin: -2px 22px;
+    margin-top: -10px;
+  }
+  
+  .navbar li a{
+    font-size: 0.7rem;
+  }
+  }
+  
+
+@media only screen and (min-width: 901px) and (max-width: 1024px){
+
+
+img[alt="STEP-UP LOGO"] {
+  width: 8%;
+  height: 65px;
+  margin-left: 12px;
+}
+
+.logo a{
+  margin-top: 5px;
+  font-size: 0.7rem;
+}
+
+.logo a img{
+  height: 20px;
+  width: 20px;
+}
+
+.navbar {
+  margin-top: -18px;
+  width: 68%;
+  padding: 15px;
+}
+
+.navbar li {
+  margin: -2px 25px;
+  margin-top: -6px;
+}
+
+.navbar li a{
+  font-size: 0.7rem;
+}
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px){
+ 
+  main{
+    overflow-x: hidden;
+  }
+  
+.clouds img {
+  width: 50%;
+  height: auto;
+  position: relative;
+  top: 2rem;
+}
+
+.adult {
+  bottom: 5.5rem;
+  font-size: 1.5rem;
+  left: 42%;
+}
+
+#content {
+  padding: 25px 80px;
+  font-size: 0.9rem;
+}
+
+#young-people p {
+  padding: 5px 8px;
+  font-size: 0.7rem;
+  max-width: 90%;
+  margin-top: 10px;
+}
+
+.build-hobby{
+  margin-top: 30px;
+}
+
+.build-hobby-content{
+  margin-left: 40px;
+  margin-top: 30px;
+}
+
+.build-hobby-content p {
+  padding: 5px;
+  font-size: 1rem;
+}
+
+.build-hobby-content ul {
+  padding-top: 10px;
+  margin-left: 40px;
+}
+
+.build-hobby-content li {
+  font-size: 1rem;
+}
+
+.build-hobby-content img{
+  width: 55%;
+}
+
+
+footer{
+  margin-top: -30px; 
+ }
+ 
+ .contact {
+   margin-left: 70px;
+   margin-top: 40px;
+ }
+ 
+ .whatsapp, .email, .location {
+   margin-bottom: 15px;
+ }
+ 
+ .circle-foot {
+   width: 35px;
+   height: 35px;
+ }
+ 
+ .circle-img{
+   padding: 6px;
+     height: 35px;
+     width: 35px;
+ }
+ 
+ .whatsapp-content a, .email-content a, .location-content a{
+   font-size: 0.8rem;
+ }
+ 
+ .logo1{
+   margin-left: 120px;
+ }
+ 
+ .logo1 img{
+   width: 25%;
+   height: auto;
+ }
+ 
+ .logo1 p{
+     font-size: 0.8rem;
+     padding-right: 70px;
+     margin-bottom: 10px;
+ }
+ 
+ img[alt="CURVE IMAGE"] {
+   top: 0rem;
+   left: 3%;
+   height: 50px;
+   width: 6%;
+ }
+ 
+ .copyright h6{
+   font-size: 0.6rem;
+ }
+
+ .navigation-arrows{
+  margin-top: 10px;
+}
+
+.circle-arrow{
+  width: 35px;
+  height: 35px;
+  font-size: 28px;
+  line-height: 35px;
+}
+
+
+}
+
+
+@media only screen and (min-width: 900px) and (max-width: 1024px){
+  .adult {
+    bottom: 6rem;
+    font-size: 1.5rem;
+    left: 44%;
+}
+}
+
+
+@media only screen and (min-width: 1025px) and (max-width: 1200px) {
+
+  .navbar {
+    padding: 10px;
+  }
+
+  .navbar li {
+    margin: 0 22px;
+  }
+
+  .navbar li a {
+    font-size: 0.8rem;
+  }
+
+  img[alt="CURVE IMAGE"] {
+    top: 2.5rem;
+    left: 2%;
+    height: 70px;
+    width: 7%;
+  }
+
+  .adult{
+    left: 40%;
+  }
+
+  .logo1 {
+    margin-left: 110px;
+  }
+
+}
+
+
+@media only screen and (min-width: 1440px) {
+
+ .logo1 img {
+  width: 20%;
+  height: auto;
+}
+
+.clouds img{
+  height: 350px;
+}
+
+.adult{
+  bottom: 10.5rem;
+  left: 46%;
+}
+
+img[alt="CURVE IMAGE"] {
+  height: 120px;
+  width: 5%;
+}
+
 }

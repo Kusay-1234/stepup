@@ -1,48 +1,50 @@
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: "Poppins";
 }
 
-body{
+body {
   overflow-x: hidden;
 }
 
-.logo{
+.logo {
   background-color: #6D6875;
   display: flex;
   justify-content: space-between;
   width: 100%;
 }
 
-.logo a{
+.logo a {
   text-decoration: none;
   color: white;
-  text-align: center; /* Center the text inside the a tag */
-  margin: 0 auto; /* Ensure the a tag takes only the required space */
+  text-align: center;
+  /* Center the text inside the a tag */
+  margin: 0 auto;
+  /* Ensure the a tag takes only the required space */
   margin-top: 10px;
 }
 
-.logo a img{
+.logo a img {
   vertical-align: middle;
   height: 30px;
   width: 30px;
 }
 
-img[alt="STEP-UP LOGO"]{
-width: 8%;
-height: 90px;
-margin-left: 50px;
+img[alt="STEP-UP LOGO"] {
+  width: 8%;
+  height: 90px;
+  margin-left: 50px;
 }
 
-.nav{
+.nav {
   display: flex;
   justify-content: center;
   background-color: #FEFAE0;
 }
 
-.navbar{
+.navbar {
   display: flex;
   margin-top: -30px;
   width: 60%;
@@ -53,53 +55,88 @@ margin-left: 50px;
   box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.3);
 }
 
-.navbar li{
+.navbar li {
   list-style: none;
   margin: 0 25px;
 }
 
-.navbar li a{
+.navbar li a {
   text-decoration: none;
   color: black;
+  position: relative;
 }
 
-.bg-color{
+/* Style for active link */
+.navbar li a.active {
+  color: black;
+  /* Ensure the text stays black */
+  padding-bottom: 5px;
+  /* Add padding to push the text away from the line */
+}
+
+.navbar li a.active::after {
+  content: '';
+  /* Empty content for the line */
+  position: absolute;
+  bottom: 0;
+  /* Position it right below the text */
+  left: 0;
+  width: 100%;
+  /* Make the line the same width as the text */
+  height: 4px;
+  /* Height of the red line */
+  border: 2px solid #D24259;
+  border-radius: 10px;
+  /* Rounded corners for the line */
+}
+
+#our {
+  transition: all 0.5s ease;
+  /* Smooth transition for hover effects */
+}
+
+#our:hover {
+  background-color: #F67682;
+  color: white;
+}
+
+.bg-color {
   background-color: #FEFAE0;
 }
 
-.step-up-front{
+.step-up-front {
   display: flex;
   padding-top: 60px;
 }
 
-.step-up-front img{
+.step-up-front img {
   width: 45%;
   padding: 0 30px;
 }
 
-.step-up-content{
+.step-up-content {
   padding-left: 50px;
   padding-top: 50px;
 }
 
-.step-up-content h1{
+.step-up-content h1 {
   font-size: 3rem;
   font-weight: 400;
   font-family: "Pompiere";
 }
 
-.step-up-content h2{
+.step-up-content h2 {
   font-size: 1.8rem;
   color: #D24259;
   padding-top: 20px;
 }
 
-.step-up-content p{
+.step-up-content p {
   font-size: 0.8rem;
   padding-top: 25px;
 }
 
-.learn-more{
+.learn-more {
   padding: 10px 25px;
   border-radius: 30px;
   background-color: #3880B7;
@@ -107,28 +144,46 @@ margin-left: 50px;
   margin-top: 30px;
   border: none;
   cursor: pointer;
+  transition: all 0.6s ease;
+  /* Smooth transition for hover effects */
 }
 
-img[alt="WAVE SHAPE IMAGE"]{
-  width: 100%;
+.learn-more:hover {
+  background-color: black;
+  /* Button background turns black on hover */
+  transform: scale(1.1);
+  /* Makes the button grow slightly on hover */
+  padding: 10px 35px;
+  font-size: 1rem;
 }
 
-.bg-color1{
-background-color: #7D838F;
+img[alt="WAVE SHAPE IMAGE"] {
+  width: 120%;
+  clip-path: inset(0 7.5% 0 7.5%);
 }
 
-.what-we-do{
+.wave-shape {
+  position: relative;
+  right: 10%;
+}
+
+.bg-color1 {
+  background-color: #7D838F;
+  margin-top: -7px;
+}
+
+.what-we-do {
   padding-top: 40px;
   padding-left: 40px;
 }
 
-.what-we-do h1{
+.what-we-do h1 {
   font-size: 4rem;
   color: white;
   font-family: "Poetsen One";
 }
 
-.what-we-do h2{
+.what-we-do h2 {
   font-size: 1.8rem;
   color: #FFB5AA;
   font-weight: 500;
@@ -147,10 +202,41 @@ background-color: #7D838F;
 }
 
 .circle-overlay img {
-  margin-bottom: 10px; /* Space between image and text */
-  border-radius: 50%; /* Makes the icon circular */
+  margin-bottom: 10px;
+  /* Space between image and text */
+  border-radius: 50%;
+  /* Makes the icon circular */
   background-color: white;
   padding: 15px;
+  animation: bounce 1.5s ease-in-out infinite;
+  /* Apply the bounce animation */
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+    /* Start position */
+  }
+
+  25% {
+    transform: translateY(-10px);
+    /* Move up slightly */
+  }
+
+  50% {
+    transform: translateY(0);
+    /* Move back to start position */
+  }
+
+  75% {
+    transform: translateY(10px);
+    /* Move down slightly */
+  }
+
+  100% {
+    transform: translateY(0);
+    /* Return to start position */
+  }
 }
 
 .circle-overlay h3 {
@@ -159,14 +245,14 @@ background-color: #7D838F;
   color: white;
 }
 
-.dashed-line{
+.dashed-line {
   border-bottom: 4px dashed white;
   width: 80%;
   padding-top: 50px;
   margin: 20px auto;
 }
 
-.free-consulting{
+.free-consulting {
   display: flex;
   padding-top: 50px;
 }
@@ -187,174 +273,242 @@ background-color: #7D838F;
   font-weight: 500;
 }
 
-.free-consulting-content h2{
+.free-consulting-content h2 {
   font-size: 3rem;
   color: white;
   font-family: "Agdasima";
 }
 
-.free-consulting-content p{
+.free-consulting-content p {
   font-size: 0.9rem;
   padding: 20px 80px;
   color: white;
   font-weight: bold;
 }
 
-.get-consult{
+.get-consult {
   padding: 10px 30px;
   color: white;
   background-color: #00ABFF;
   box-shadow: 5px 5px 0px #006A9E;
   border: none;
   cursor: pointer;
+  transition: all 0.6s ease;
+  /* Smooth transition for hover effects */
 }
 
-.arrow img{
+.get-consult:hover {
+  background-color: #FFCC00;
+  /* Button background turns black on hover */
+  transform: scale(1.1);
+  /* Makes the button grow slightly on hover */
+  padding: 12px 40px;
+  font-size: 1.2rem;
+  box-shadow: 5px 5px 0px black;
+}
+
+.arrow img {
   width: 25%;
   margin-top: -50px;
   padding-left: 100px;
   padding-bottom: 20px;
 }
 
-.faq{
+.faq {
   text-align: center;
   padding-top: 40px;
 }
 
-.faq h1{
+.faq h1 {
   color: #D24259;
   font-size: 2.5rem;
   font-weight: 400;
   font-family: "Prata";
 }
 
-.faq h2{
+.faq h2 {
   font-size: 2rem;
   font-weight: 400;
   font-family: "Preahvihear";
 }
 
-.que-ans{
+.que-ans {
   padding-top: 20px;
 }
 
-.first-que, .second-que, .third-que, .fourth-que, .fifth-que{
+.first-que,
+.second-que,
+.third-que,
+.fourth-que {
   display: flex;
   justify-content: center;
   gap: 20px;
 }
 
-.second-que, .third-que, .fourth-que, .fifth-que{
+.second-que,
+.third-que,
+.fourth-que {
   padding-top: 50px;
 }
 
-.fifth-que{
-  margin-bottom: -250px;
-}
-
-.first-que h4, .second-que h4, .third-que h4, .fourth-que h4, .fifth-que h4{
+.first-que h4,
+.second-que h4,
+.third-que h4,
+.fourth-que h4 {
   font-size: 1.6rem;
   font-weight: 400;
   border-radius: 8px;
   padding: 28px;
-  padding-right: 500px;
   box-shadow: 10px 10px 10px -5px rgba(0, 0, 0, 0.3);
   background-color: white;
   font-family: "Pompiere";
 }
 
-.first-que span, .second-que span, .third-que span, .fourth-que span, .fifth-que span{
+.first-que h4{
+  padding-right: 380px;
+}
+
+.fourth-que h4 {
+  padding-right: 60px;
+}
+
+.third-que h4 {
+  padding-right: 190px;
+} 
+
+.first-que span,
+.second-que span,
+.third-que span,
+.fourth-que span {
   font-size: 2rem;
   font-weight: 600;
   color: white;
-  padding: 20px;
-  padding-top: 15px;
-  padding-left: 30px;
-  padding-right: 30px;
+  padding: 15px 30px;
   background-color: #FF788C;
   border-radius: 5px;
   box-shadow: 10px 10px 10px -5px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
 }
 
-.cubicles{
+.answer {
+  display: none;
+  /* Start hidden */
+  background-color: black;
+  color: white;
+  padding: 20px;
+  margin-top: 10px;
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: opacity 0.3s ease, max-height 0.3s ease;
+  border-radius: 8px;
+  margin-left: 220px;
+  font-family: "Pompiere";
+  font-size: 1.2rem;
+}
+
+.answer li {
+  font-family: "Pompiere";
+  font-size: 1.2rem;
+  margin-left: 20px;
+}
+
+.answer.show {
+  display: block;
+  opacity: 1;
+  max-width: 60%;
+  max-height: 400px;
+  /* Adjust based on content size */
+  padding-top: 20px;
+}
+
+.cubicles {
   display: flex;
   justify-content: space-between;
 }
 
-img[alt="CURVE IMAGE"]{
+img[alt="CURVE IMAGE"] {
   position: relative;
-  top: 20rem;
+  top: 3rem;
   left: 3%;
   height: 100px;
   width: 9%;
   z-index: 99;
 }
 
-img[alt="CUBICLES IMAGE"]{
+img[alt="CUBICLES IMAGE"] {
   position: relative;
   top: 10rem;
   left: 12%;
   clip-path: inset(0 30% 40% 0%);
   width: 30%;
+  display: none;
 }
 
-footer{
+footer {
   position: relative;
   z-index: 1;
 }
 
-.info{
+.info {
   display: flex;
   justify-content: space-around;
   background-color: #005D8D;
 }
 
-.contact{
+.contact {
   margin-left: 150px;
   margin-top: 40px;
 }
 
-.whatsapp, .email, .location{
+.whatsapp,
+.email,
+.location {
   display: flex;
   gap: 10px;
   margin-bottom: 30px;
 }
 
 .circle-foot {
-  width: 45px; /* Adjust the size of the circle image */
-  height: 45px; /* Adjust the size of the circle image */
+  width: 45px;
+  /* Adjust the size of the circle image */
+  height: 45px;
+  /* Adjust the size of the circle image */
   border-radius: 50%;
   background-color: #D24259;
   box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.3);
 }
 
 .circle-img {
-    object-fit: cover; 
-    padding: 8px;  
+  object-fit: cover;
+  padding: 8px;
 }
 
-.whatsapp-content a, .email-content a, .location-content a{
+.whatsapp-content a,
+.email-content a,
+.location-content a {
   text-decoration: none;
   color: white;
   font-size: 1rem;
   font-weight: bold;
 }
 
-.whatsapp-content p, .email-content p{
-margin-top: 8px;
+.whatsapp-content p,
+.email-content p {
+  margin-top: 8px;
 }
 
-.logo1{
+.logo1 {
   margin-top: 20px;
   margin-left: 300px;
 }
 
-.logo1 img{
+.logo1 img {
   width: 30%;
   height: 150px;
 }
 
-.logo1 p{
+.logo1 p {
   padding-bottom: 20px;
   color: white;
   font-size: 1rem;
@@ -362,17 +516,1211 @@ margin-top: 8px;
   font-weight: bold;
 }
 
-.copyright{
+.copyright {
   background-color: black;
   padding: 20px;
 }
 
-.copyright h6{
+.copyright h6 {
   text-align: center;
   color: white;
 }
 
-.copyright a{
+.copyright a {
   color: royalblue;
   text-decoration: none;
+}
+
+
+
+/* Responsive Design */
+
+@media only screen and (min-width: 320px) and (max-width: 401px) {
+
+
+  img[alt="STEP-UP LOGO"] {
+    width: 15%;
+    height: 55px;
+    margin-left: 12px;
+  }
+
+  .logo a {
+    margin-top: 5px;
+    font-size: 0.5rem;
+  }
+
+  .logo a img {
+    height: 15px;
+    width: 15px;
+  }
+
+  .navbar {
+    margin-top: -12px;
+    width: 80%;
+    padding: 5px;
+  }
+
+  .navbar li {
+    margin: -2px 6px;
+    margin-top: -10px;
+  }
+
+  .navbar li a {
+    font-size: 0.4rem;
+  }
+
+  .first-que h4,
+  .second-que h4,
+  .third-que h4,
+  .fourth-que h4,
+  .fifth-que h4 {
+    padding: 10px;
+    padding-right: 5px;
+    font-size: 0.6rem;
+  }
+
+  .first-que h4{
+    padding-right: 140px;
+  }
+
+  .third-que h4{
+    padding-right: 65px;
+  }
+
+  .fourth-que h4{
+    padding-right: 15px;
+  }
+}
+
+
+@media only screen and (min-width: 400px) and (max-width: 480px) {
+
+
+  img[alt="STEP-UP LOGO"] {
+    width: 15%;
+    height: 60px;
+    margin-left: 12px;
+  }
+
+  .logo a {
+    margin-top: 5px;
+    font-size: 0.5rem;
+  }
+
+  .logo a img {
+    height: 15px;
+    width: 15px;
+  }
+
+  .navbar {
+    margin-top: -12px;
+    width: 80%;
+    padding: 5px;
+  }
+
+  .navbar li {
+    margin: -2px 8px;
+    margin-top: -6px;
+  }
+
+  .navbar li a {
+    font-size: 0.5rem;
+  }
+
+  .first-que h4,
+  .second-que h4,
+  .third-que h4,
+  .fourth-que h4,
+  .fifth-que h4 {
+    padding: 10px;
+    padding-right: 5px;
+    font-size: 0.8rem;
+  }
+
+  .first-que h4{
+    padding-right: 185px;
+  }
+
+  .third-que h4{
+    padding-right: 85px;
+  }
+
+  .fourth-que h4{
+    padding-right: 15px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+
+  body {
+    overflow-x: hidden;
+  }
+
+  main {
+    overflow-x: hidden;
+  }
+
+  footer {
+    width: 100%;
+    height: 100%;
+    margin-top: -20px;
+  }
+
+  .step-up-front {
+    padding-top: 30px;
+  }
+
+  .step-up-content {
+    padding-left: 15px;
+    padding-top: 0px;
+  }
+
+  .step-up-content h1 {
+    font-size: 1.2rem;
+  }
+
+  .step-up-content h2 {
+    font-size: 0.8rem;
+    padding-top: 0;
+  }
+
+  .step-up-content p {
+    font-size: 0.5rem;
+    padding-top: 0;
+  }
+
+  .learn-more {
+    padding: 5px 10px;
+    font-size: 0.5rem;
+    margin-top: 15px;
+  }
+
+  .learn-more:hover {
+    background-color: black;
+    /* Button background turns black on hover */
+    transform: scale(1.1);
+    /* Makes the button grow slightly on hover */
+    padding: 5px 20px;
+    font-size: 0.5rem;
+  }
+
+  .step-up-front img {
+    width: 40%;
+    padding: 0px 5px;
+  }
+
+  img[alt="WAVE SHAPE IMAGE"] {
+    margin-top: 20px;
+  }
+
+  .what-we-do {
+    padding-top: 20px;
+    padding-left: 15px;
+  }
+
+  .what-we-do h2 {
+    font-size: 1rem;
+  }
+
+  .what-we-do h1 {
+    font-size: 1.4rem;
+  }
+
+  .therapies {
+    padding-top: 25px;
+  }
+
+  .circle-overlay img {
+    padding: 6px;
+    height: 40px;
+    width: 40px;
+  }
+
+  .circle-overlay {
+    padding-top: 0;
+  }
+
+  .circle-overlay h3 {
+    margin: 0;
+    font-size: 0.4rem;
+  }
+
+  .dashed-line {
+    border-bottom-width: 3px;
+    padding-top: 15px;
+  }
+
+  .free-consulting {
+    padding-top: 20px;
+  }
+
+  .free-consulting img {
+    width: 30%;
+    padding-left: 20px;
+  }
+
+  .free-consulting-content {
+    padding-top: 0px;
+  }
+
+  .free-consulting-content h1 {
+    font-size: 1rem;
+  }
+
+  .free-consulting-content h2 {
+    font-size: 1.2rem;
+  }
+
+  .free-consulting-content p {
+    font-size: 0.6rem;
+    padding: 5px 5px;
+  }
+
+  .get-consult {
+    padding: 5px 15px;
+    box-shadow: 3px 3px 0px #006A9E;
+    font-size: 0.6rem;
+  }
+
+  .get-consult:hover {
+    background-color: #FFCC00;
+    /* Button background turns black on hover */
+    transform: scale(1.1);
+    /* Makes the button grow slightly on hover */
+    padding: 6px 20px;
+    font-size: 0.6rem;
+    box-shadow: 3px 3px 0px black;
+  }
+
+
+  .arrow img {
+    width: 15%;
+    padding-left: 0px;
+    padding-bottom: 10px;
+    margin-left: 28px;
+    margin-top: -15px;
+  }
+
+  .faq {
+    padding-top: 20px;
+  }
+
+  .faq h1 {
+    font-size: 1rem;
+  }
+
+  .faq h2 {
+    font-size: 1rem;
+  }
+
+  .que-ans {
+    padding-top: 20px;
+  }
+
+  .second-que,
+  .third-que,
+  .fourth-que,
+  .fifth-que {
+    padding-top: 20px;
+  }
+
+  .answer {
+    padding: 5px;
+    margin-top: 6px;
+    margin-left: 50px;
+    font-size: 0.6rem;
+  }
+
+  .answer.show {
+    padding-top: 10px;
+  }
+
+  .answer li {
+    font-size: 0.6rem;
+  }
+
+  .first-que span,
+  .second-que span,
+  .third-que span,
+  .fourth-que span,
+  .fifth-que span {
+    font-size: 1rem;
+    padding: 10px;
+    padding-top: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .contact {
+    margin-left: 10px;
+    margin-top: 40px;
+  }
+
+  .whatsapp,
+  .email,
+  .location {
+    margin-bottom: 15px;
+  }
+
+  .circle-foot {
+    width: 30px;
+    height: 30px;
+  }
+
+  .circle-img {
+    padding: 6px;
+    height: 30px;
+    width: 30px;
+  }
+
+  .whatsapp-content a,
+  .email-content a,
+  .location-content a {
+    font-size: 0.6rem;
+  }
+
+  .logo1 {
+    margin-left: 40px;
+  }
+
+  .logo1 img {
+    width: 40%;
+    height: auto;
+  }
+
+  .logo1 p {
+    font-size: 0.6rem;
+    padding-right: 10px;
+    margin-bottom: 10px;
+  }
+
+  img[alt="CUBICLES IMAGE"] {
+    display: none;
+  }
+
+  img[alt="CURVE IMAGE"] {
+    top: 0rem;
+    left: 2%;
+    height: 50px;
+    width: 10%;
+  }
+
+  .fourth-que {
+    margin-bottom: 25px;
+  }
+
+  .copyright h6 {
+    font-size: 0.5rem;
+  }
+
+}
+
+
+@media only screen and (min-width: 481px) and (max-width: 600px) {
+
+
+  img[alt="STEP-UP LOGO"] {
+    width: 12%;
+    height: 55px;
+    margin-left: 12px;
+  }
+
+  .logo a {
+    margin-top: 5px;
+    font-size: 0.5rem;
+  }
+
+  .logo a img {
+    height: 15px;
+    width: 15px;
+  }
+
+  .navbar {
+    margin-top: -12px;
+    width: 80%;
+    padding: 5px;
+  }
+
+  .navbar li {
+    margin: -2px 15px;
+    margin-top: -10px;
+  }
+
+  .navbar li a {
+    font-size: 0.5rem;
+  }
+}
+
+
+@media only screen and (min-width: 601px) and (max-width: 767px) {
+
+
+  img[alt="STEP-UP LOGO"] {
+    width: 12%;
+    height: 65px;
+    margin-left: 12px;
+  }
+
+  .logo a {
+    margin-top: 5px;
+    font-size: 0.5rem;
+  }
+
+  .logo a img {
+    height: 15px;
+    width: 15px;
+  }
+
+  .navbar {
+    margin-top: -12px;
+    width: 80%;
+    padding: 10px;
+  }
+
+  .navbar li {
+    margin: -2px 20px;
+    margin-top: -6px;
+  }
+
+  .navbar li a {
+    font-size: 0.6rem;
+  }
+}
+
+@media only screen and (min-width: 481px) and (max-width: 767px) {
+
+  body {
+    overflow-x: hidden;
+  }
+
+  main {
+    overflow-x: hidden;
+  }
+
+  footer {
+    width: 100%;
+    height: 100%;
+    margin-top: -20px;
+  }
+
+  .step-up-front {
+    padding-top: 40px;
+  }
+
+  .step-up-content {
+    padding-left: 15px;
+    padding-top: 20px;
+  }
+
+  .step-up-content h1 {
+    font-size: 1.2rem;
+  }
+
+  .step-up-content h2 {
+    font-size: 0.8rem;
+    padding-top: 0;
+  }
+
+  .step-up-content p {
+    font-size: 0.5rem;
+    padding-top: 0;
+  }
+
+  .learn-more {
+    padding: 5px 10px;
+    font-size: 0.5rem;
+    margin-top: 15px;
+  }
+
+  .learn-more:hover {
+    background-color: black;
+    /* Button background turns black on hover */
+    transform: scale(1.1);
+    /* Makes the button grow slightly on hover */
+    padding: 7px 23px;
+    font-size: 0.6rem;
+  }
+
+
+  .step-up-front img {
+    width: 50%;
+    padding: 0px 5px;
+  }
+
+  img[alt="WAVE SHAPE IMAGE"] {
+    margin-top: 40px;
+  }
+
+  .what-we-do {
+    padding-top: 20px;
+    padding-left: 15px;
+  }
+
+  .what-we-do h2 {
+    font-size: 1rem;
+  }
+
+  .what-we-do h1 {
+    font-size: 1.4rem;
+  }
+
+  .therapies {
+    padding-top: 25px;
+  }
+
+  .circle-overlay img {
+    padding: 6px;
+    height: 50px;
+    width: 50px;
+  }
+
+  .circle-overlay {
+    padding-top: 0;
+  }
+
+  .circle-overlay h3 {
+    margin: 0;
+    font-size: 0.5rem;
+  }
+
+  .dashed-line {
+    border-bottom-width: 3px;
+    padding-top: 15px;
+  }
+
+  .free-consulting {
+    padding-top: 20px;
+  }
+
+  .free-consulting img {
+    width: 33%;
+    padding-left: 20px;
+  }
+
+  .free-consulting-content {
+    padding-top: 40px;
+  }
+
+  .free-consulting-content h1 {
+    font-size: 1rem;
+  }
+
+  .free-consulting-content h2 {
+    font-size: 1.2rem;
+  }
+
+  .free-consulting-content p {
+    font-size: 0.6rem;
+    padding: 5px 5px;
+  }
+
+  .get-consult {
+    padding: 5px 15px;
+    box-shadow: 3px 3px 0px #006A9E;
+    font-size: 0.6rem;
+  }
+
+  .get-consult:hover {
+    background-color: #FFCC00;
+    /* Button background turns black on hover */
+    transform: scale(1.1);
+    /* Makes the button grow slightly on hover */
+    padding: 8px 25px;
+    font-size: 0.7rem;
+    box-shadow: 3px 3px 0px black;
+  }
+
+  .arrow img {
+    width: 15%;
+    padding-left: 0px;
+    padding-bottom: 10px;
+    margin-left: 35px;
+    margin-top: -15px;
+  }
+
+  .faq {
+    padding-top: 20px;
+  }
+
+  .faq h1 {
+    font-size: 1rem;
+  }
+
+  .faq h2 {
+    font-size: 1rem;
+  }
+
+  .que-ans {
+    padding-top: 20px;
+  }
+
+  .first-que h4,
+  .second-que h4,
+  .third-que h4,
+  .fourth-que h4,
+  .fifth-que h4 {
+    padding: 10px;
+    padding-right: 10px;
+    font-size: 1rem;
+  }
+
+  .first-que h4{
+    padding-right: 230px;
+  }
+
+  .third-que h4{
+    padding-right: 110px;
+  }
+
+  .fourth-que h4{
+    padding-right: 20px;
+  }
+
+  .second-que,
+  .third-que,
+  .fourth-que,
+  .fifth-que {
+    padding-top: 20px;
+  }
+
+  .first-que span,
+  .second-que span,
+  .third-que span,
+  .fourth-que span,
+  .fifth-que span {
+    font-size: 1rem;
+    padding: 10px;
+    padding-top: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .answer {
+    padding: 10px;
+    margin-top: 8px;
+    margin-left: 60px;
+    font-size: 0.8rem;
+  }
+
+  .answer.show {
+    padding-top: 10px;
+  }
+
+  .answer li {
+    font-size: 0.7rem;
+  }
+
+  .contact {
+    margin-left: 10px;
+    margin-top: 40px;
+  }
+
+  .whatsapp,
+  .email,
+  .location {
+    margin-bottom: 15px;
+  }
+
+  .circle-foot {
+    width: 30px;
+    height: 30px;
+  }
+
+  .circle-img {
+    padding: 6px;
+    height: 30px;
+    width: 30px;
+  }
+
+  .whatsapp-content a,
+  .email-content a,
+  .location-content a {
+    font-size: 0.6rem;
+  }
+
+  .logo1 {
+    margin-left: 90px;
+  }
+
+  .logo1 img {
+    width: 25%;
+    height: auto;
+  }
+
+  .logo1 p {
+    font-size: 0.6rem;
+    padding-right: 70px;
+    margin-bottom: 10px;
+  }
+
+  img[alt="CUBICLES IMAGE"] {
+    display: none;
+  }
+
+  img[alt="CURVE IMAGE"] {
+    top: 0rem;
+    left: 2%;
+    height: 50px;
+    width: 10%;
+  }
+
+  .fourth-que {
+    margin-bottom: 25px;
+  }
+
+  .copyright h6 {
+    font-size: 0.5rem;
+  }
+
+}
+
+@media only screen and (min-width: 601px) and (max-width: 767px) {
+
+  img[alt="WAVE SHAPE IMAGE"] {
+    margin-top: 0px;
+  }
+
+  .step-up-content {
+    padding-left: 15px;
+    padding-top: 40px;
+  }
+
+  .free-consulting-content {
+    padding-top: 50px;
+  }
+
+  .arrow img {
+    width: 15%;
+    padding-left: 0px;
+    padding-bottom: 10px;
+    margin-left: 40px;
+    margin-top: -20px;
+  }
+
+  img[alt="CURVE IMAGE"] {
+    width: 8%;
+  }
+
+}
+
+
+
+
+@media only screen and (min-width: 768px) and (max-width: 900px) {
+
+
+  img[alt="STEP-UP LOGO"] {
+    width: 8%;
+    height: 65px;
+    margin-left: 12px;
+  }
+
+  .logo a {
+    margin-top: 8px;
+    font-size: 0.6rem;
+  }
+
+  .logo a img {
+    height: 20px;
+    width: 20px;
+  }
+
+  .navbar {
+    margin-top: -12px;
+    width: 72%;
+    padding: 15px;
+  }
+
+  .navbar li {
+    margin: -2px 22px;
+    margin-top: -10px;
+  }
+
+  .navbar li a {
+    font-size: 0.7rem;
+  }
+}
+
+
+@media only screen and (min-width: 901px) and (max-width: 1024px) {
+
+
+  img[alt="STEP-UP LOGO"] {
+    width: 8%;
+    height: 65px;
+    margin-left: 12px;
+  }
+
+  .logo a {
+    margin-top: 5px;
+    font-size: 0.7rem;
+  }
+
+  .logo a img {
+    height: 20px;
+    width: 20px;
+  }
+
+  .navbar {
+    margin-top: -18px;
+    width: 68%;
+    padding: 15px;
+  }
+
+  .navbar li {
+    margin: -2px 25px;
+    margin-top: -6px;
+  }
+
+  .navbar li a {
+    font-size: 0.7rem;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+
+  body {
+    overflow-x: hidden;
+  }
+
+  main {
+    overflow-x: hidden;
+  }
+
+  footer {
+    margin-top: -22px;
+  }
+
+  .step-up-front {
+    padding-top: 50px;
+  }
+
+  .step-up-content {
+    padding-left: 25px;
+    padding-top: 45px;
+  }
+
+  .step-up-content h1 {
+    font-size: 2rem;
+  }
+
+  .step-up-content h2 {
+    font-size: 1rem;
+    padding-top: 0;
+  }
+
+  .step-up-content p {
+    font-size: 0.7rem;
+    padding-top: 0;
+  }
+
+  .learn-more {
+    padding: 8px 15px;
+    font-size: 0.7rem;
+    margin-top: 15px;
+  }
+
+  .learn-more:hover {
+    background-color: black;
+    /* Button background turns black on hover */
+    transform: scale(1.1);
+    /* Makes the button grow slightly on hover */
+    padding: 8px 30px;
+    font-size: 0.8rem;
+  }
+
+  .step-up-front img {
+    width: 50%;
+    padding: 0px 5px;
+  }
+
+  img[alt="WAVE SHAPE IMAGE"] {
+    margin-top: 0px;
+  }
+
+  .what-we-do {
+    padding-top: 20px;
+    padding-left: 15px;
+  }
+
+  .what-we-do h2 {
+    font-size: 1.4rem;
+  }
+
+  .what-we-do h1 {
+    font-size: 2rem;
+  }
+
+  .therapies {
+    padding-top: 25px;
+  }
+
+  .circle-overlay img {
+    padding: 6px;
+    height: 65px;
+    width: 65px;
+  }
+
+  .circle-overlay {
+    padding-top: 0;
+  }
+
+  .circle-overlay h3 {
+    margin: 0;
+    font-size: 0.9rem;
+  }
+
+  .dashed-line {
+    border-bottom-width: 4px;
+    padding-top: 40px;
+  }
+
+  .free-consulting {
+    padding-top: 20px;
+  }
+
+  .free-consulting img {
+    width: 38%;
+    padding-left: 20px;
+  }
+
+  .free-consulting-content {
+    padding-top: 75px;
+  }
+
+  .free-consulting-content h1 {
+    font-size: 1.5rem;
+  }
+
+  .free-consulting-content h2 {
+    font-size: 1.8rem;
+  }
+
+  .free-consulting-content p {
+    font-size: 0.7rem;
+    padding: 5px 5px;
+  }
+
+  .get-consult {
+    padding: 10px 20px;
+    box-shadow: 3px 3px 0px #006A9E;
+    font-size: 0.8rem;
+    margin-top: 20px;
+  }
+
+  .get-consult:hover {
+    background-color: #FFCC00;
+    /* Button background turns black on hover */
+    transform: scale(1.1);
+    /* Makes the button grow slightly on hover */
+    padding: 10px 30px;
+    font-size: 1rem;
+    box-shadow: 3px 3px 0px black;
+  }
+
+  .arrow img {
+    width: 20%;
+    padding-left: 0px;
+    padding-bottom: 10px;
+    margin-left: 38px;
+    margin-top: -30px;
+  }
+
+  .faq {
+    padding-top: 20px;
+  }
+
+  .faq h1 {
+    font-size: 1.6rem;
+  }
+
+  .faq h2 {
+    font-size: 1.8rem;
+  }
+
+  .que-ans {
+    padding-top: 20px;
+  }
+
+  .first-que h4,
+  .second-que h4,
+  .third-que h4,
+  .fourth-que h4,
+  .fifth-que h4 {
+    padding: 10px;
+    padding-right: 30px;
+    font-size: 1.4rem;
+  }
+
+  .first-que h4{
+    padding-right: 330px;
+  }
+
+  .third-que h4{
+    padding-right: 170px;
+  }
+
+  .fourth-que h4{
+    padding-right: 50px;
+  }
+
+  .answer{
+    font-size: 1rem;
+  }
+
+  .answer li{
+    font-size: 1rem;
+  }
+
+  .answer.show{
+    max-height: 450px;
+  }
+
+  .second-que,
+  .third-que,
+  .fourth-que,
+  .fifth-que {
+    padding-top: 40px;
+  }
+
+  .first-que span,
+  .second-que span,
+  .third-que span,
+  .fourth-que span,
+  .fifth-que span {
+    font-size: 1.5rem;
+    padding: 10px;
+    padding-top: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .fourth-que {
+    margin-bottom: 40px;
+  }
+
+  .contact {
+    margin-left: 70px;
+    margin-top: 40px;
+  }
+
+  .whatsapp,
+  .email,
+  .location {
+    margin-bottom: 15px;
+  }
+
+  .circle-foot {
+    width: 35px;
+    height: 35px;
+  }
+
+  .circle-img {
+    padding: 6px;
+    height: 35px;
+    width: 35px;
+  }
+
+  .whatsapp-content a,
+  .email-content a,
+  .location-content a {
+    font-size: 0.8rem;
+  }
+
+  .logo1 {
+    margin-left: 120px;
+  }
+
+  .logo1 img {
+    width: 25%;
+    height: auto;
+  }
+
+  .logo1 p {
+    font-size: 0.8rem;
+    padding-right: 70px;
+    margin-bottom: 10px;
+  }
+
+  img[alt="CUBICLES IMAGE"] {
+    display: none;
+  }
+
+  img[alt="CURVE IMAGE"] {
+    top: 0rem;
+    left: 3%;
+    height: 50px;
+    width: 6%;
+  }
+
+  .copyright h6 {
+    font-size: 0.6rem;
+  }
+
+}
+
+
+@media only screen and (min-width: 1025px) and (max-width: 1200px) {
+
+  .navbar {
+    padding: 10px;
+  }
+
+  .navbar li {
+    margin: 0 22px;
+  }
+
+  .navbar li a {
+    font-size: 0.8rem;
+  }
+
+  img[alt="CUBICLES IMAGE"] {
+    display: none;
+  }
+
+  img[alt="CURVE IMAGE"] {
+    top: 2rem;
+    left: 2%;
+    height: 70px;
+    width: 7%;
+  }
+
+  .fourth-que {
+    margin-bottom: 10px;
+  }
+
+  .logo1 {
+    margin-left: 110px;
+  }
+
+  .answer.show{
+    max-height: 450px;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+
+
+
+  .logo1 img {
+    width: 20%;
+    height: auto;
+  }
+
+  .cubicles {
+    display: none;
+  }
+
+  img[alt="CURVE IMAGE"] {
+    height: 120px;
+    width: 5%;
+  }
+
+  body {
+    overflow-x: hidden;
+  }
+
+  .fourth-que {
+    padding-bottom: 350px;
+  }
 }

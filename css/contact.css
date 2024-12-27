@@ -61,6 +61,33 @@ margin-left: 50px;
 .navbar li a{
   text-decoration: none;
   color: black;
+  position: relative;
+}
+
+/* Style for active link */
+.navbar li a.active {
+  color: black; /* Ensure the text stays black */
+  padding-bottom: 5px; /* Add padding to push the text away from the line */
+}
+
+.navbar li a.active::after {
+  content: ''; /* Empty content for the line */
+  position: absolute;
+  bottom: 0; /* Position it right below the text */
+  left: 0;
+  width: 100%; /* Make the line the same width as the text */
+  height: 4px; /* Height of the red line */
+  border: 2px solid #D24259;
+  border-radius: 10px; /* Rounded corners for the line */
+}
+
+#our{
+  transition: all 0.5s ease; /* Smooth transition for hover effects */
+}
+
+#our:hover{
+  background-color: #F67682;
+  color: white;
 }
 
 .bg-color{
@@ -133,6 +160,13 @@ margin-left: 50px;
   font-weight: bold;
   font-family: "Protest Riot";
   box-shadow: 3px 4px 0px #9B904D;
+  transition: all 0.5s ease;
+}
+
+.form-container button:hover{
+  font-size: 1.8rem;
+  background-color: #ac9c35;
+  color: whitesmoke;
 }
 
 .appointment-container {
@@ -178,27 +212,55 @@ margin-left: 50px;
   font-size: 1rem;
   cursor: pointer;
   font-family: "Poppins";
+  transition: background-color 0.7s ease; /* Smooth transition for background */
 }
 
-.information{
+.appointment-container button:hover{
+color: white;
+  background-color: black;
+}
+
+
+.contact-info {
   display: flex;
-  justify-content: space-evenly;
-  margin-top: 120px;
+  justify-content: space-between; /* Distribute the items evenly */
+  margin-top: 80px;
 }
 
-.information a{
-  padding: 40px;
+#item{
+  margin-top: 40px;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  padding: 20px;
   border-radius: 10px;
   background-color: #EAE3B8;
   text-decoration: none;
   color: black;
+  transition: background-color 0.6s ease;
+  flex: 1;
+  margin: 0 10px; /* Optional: add margin between items */
+}
+
+.contact-item:hover {
+  background-color: #FF7676; /* Change background on hover */
+}
+
+.contact-icon {
+  width: 60px; /* Set a fixed size for the icons */
+  height: 60px; 
+}
+
+.contact-text {
+  display: inline-block;
+  word-wrap: break-word; /* Allow long text to wrap in the container */
+  white-space: pre-wrap; /* Ensure that the line breaks are respected */
   font-weight: bold;
   font-family: "Potta one";
   font-size: 1.5rem;
-}
-
-.information a img{
-  vertical-align: middle;
+  text-align: center;
 }
 
 .map-image{
@@ -208,10 +270,11 @@ margin-left: 50px;
   padding-bottom: 100px;
 }
 
-.map-image img{
-  width: 80%;
+.map-image iframe{
+  width: 90%;
   box-shadow: 10px 10px 0px #9B904D;
   border-radius: 20px;
+  height: 380px;
 }
 
 img[alt="CURVE IMAGE"]{
@@ -301,4 +364,807 @@ margin-top: 8px;
 .copyright a{
   color: royalblue;
   text-decoration: none;
+}
+
+
+
+
+
+/* Responsive Design */
+
+@media only screen and (min-width: 320px) and (max-width: 401px){
+
+
+  img[alt="STEP-UP LOGO"] {
+    width: 15%;
+    height: 55px;
+    margin-left: 12px;
+  }
+  
+  .logo a{
+    margin-top: 5px;
+    font-size: 0.5rem;
+  }
+  
+  .logo a img{
+    height: 15px;
+    width: 15px;
+  }
+  
+  .navbar {
+    margin-top: -12px;
+    width: 80%;
+    padding: 5px;
+  }
+  
+  .navbar li {
+    margin: -2px 6px;
+    margin-top: -10px;
+  }
+  
+  .navbar li a{
+    font-size: 0.4rem;
+  }
+  }
+  
+
+@media only screen and (min-width: 400px) and (max-width: 480px){
+
+
+img[alt="STEP-UP LOGO"] {
+  width: 15%;
+  height: 60px;
+  margin-left: 12px;
+}
+
+.logo a{
+  margin-top: 5px;
+  font-size: 0.5rem;
+}
+
+.logo a img{
+  height: 15px;
+  width: 15px;
+}
+
+.navbar {
+  margin-top: -12px;
+  width: 80%;
+  padding: 5px;
+}
+
+.navbar li {
+  margin: -2px 8px;
+  margin-top: -6px;
+}
+
+.navbar li a{
+  font-size: 0.5rem;
+}
+}
+
+@media only screen and (max-width: 480px){
+
+  main{
+    overflow-x: hidden;
+  }
+
+  .contact-content{
+    padding-top: 25px;
+  }
+
+  .contact-content h1{
+    font-size: 1.5rem;
+  }
+
+  .contact-content p{
+    font-size: 0.8rem;
+    padding: 0 40px;
+    padding-bottom: 30px;
+  }
+
+  .container{
+    padding-top: 25px;
+    flex-direction: column;
+    margin-left: 10px;
+  }
+
+  .horizon{
+    gap: 10px;
+  }
+
+  #email, #phone {
+    width: 45.5vw
+}
+
+.form-group input, .form-group textarea {
+  width: 97%;
+  padding: 10px;
+  font-size: 0.5rem;
+}
+
+.form-group textarea {
+  height: 90px;
+}
+
+.form-container button {
+  padding: 5px 15px;
+  font-size: 0.7rem;
+  box-shadow: 2px 2px 0px #9B904D;
+}
+
+.form-container button:hover{
+  font-size: 0.9rem;
+  background-color: #ac9c35;
+  color: whitesmoke;
+}
+
+.appointment-container {
+    padding: 12px;
+    width: 96%;
+    margin-top: 25px;
+}
+
+.appointment-container h1 {
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+
+.appointment-container p {
+  font-size: 0.8rem;
+  margin-bottom: 14px;
+}
+
+.appointment-container .form-group input {
+  padding: 10px;
+  font-size: 0.5rem;
+}
+
+.appointment-container button {
+  padding: 6px;
+  font-size: 0.6rem;
+}
+
+.information{
+  margin-top: 30px;
+}
+
+.information a {
+  padding: 10px;
+  font-size: 0.5rem;
+}
+
+.information a img {
+  height: 20px;
+  width: 20px;
+}
+
+.map-image {
+  margin-top: 50px;
+  padding-bottom: 50px;
+}
+
+.map-image iframe{
+  width: 90%;
+  height: 180px;
+  box-shadow: 4px 4px 0px #9B904D;
+}
+
+img[alt="CURVE IMAGE"] {
+  top: -1.6rem;
+  left: 2%;
+  height: 50px;
+  width: 10%;
+}
+
+footer{
+  margin-top: -55px;
+}
+
+.contact {
+  margin-left: 10px;
+  margin-top: 40px;
+}
+
+.whatsapp, .email, .location {
+  margin-bottom: 15px;
+}
+
+.circle-foot {
+  width: 30px;
+  height: 30px;
+}
+
+.circle-img{
+  padding: 6px;
+    height: 30px;
+    width: 30px;
+}
+
+.whatsapp-content a, .email-content a, .location-content a{
+  font-size: 0.6rem;
+}
+
+.logo1{
+  margin-left: 40px;
+}
+
+.logo1 img{
+  width: 40%;
+  height: auto;
+}
+
+.logo1 p{
+    font-size: 0.6rem;
+    padding-right: 10px;
+    margin-bottom: 10px;
+}
+
+.copyright h6{
+  font-size: 0.5rem;
+}
+
+.contact-item{
+  padding: 15px;
+}
+
+.contact-text{
+  font-size: 0.8rem;
+}
+
+.contact-icon{
+  height: 30px;
+  width: 30px;
+}
+
+.contact-info{
+  margin-top: 40px;
+}
+
+#item{
+  margin-top: 20px;
+}
+
+}
+
+
+@media only screen and (min-width: 481px) and (max-width: 600px){
+
+
+  img[alt="STEP-UP LOGO"] {
+    width: 12%;
+    height: 55px;
+    margin-left: 12px;
+  }
+  
+  .logo a{
+    margin-top: 5px;
+    font-size: 0.5rem;
+  }
+  
+  .logo a img{
+    height: 15px;
+    width: 15px;
+  }
+  
+  .navbar {
+    margin-top: -12px;
+    width: 80%;
+    padding: 5px;
+  }
+  
+  .navbar li {
+    margin: -2px 15px;
+    margin-top: -10px;
+  }
+  
+  .navbar li a{
+    font-size: 0.5rem;
+  }
+  }
+  
+
+@media only screen and (min-width: 601px) and (max-width: 767px){
+
+
+img[alt="STEP-UP LOGO"] {
+  width: 12%;
+  height: 65px;
+  margin-left: 12px;
+}
+
+.logo a{
+  margin-top: 5px;
+  font-size: 0.5rem;
+}
+
+.logo a img{
+  height: 15px;
+  width: 15px;
+}
+
+.navbar {
+  margin-top: -12px;
+  width: 80%;
+  padding: 10px;
+}
+
+.navbar li {
+  margin: -2px 20px;
+  margin-top: -6px;
+}
+
+.navbar li a{
+  font-size: 0.6rem;
+}
+}
+
+@media only screen and (min-width: 481px) and (max-width: 767px){
+
+  main{
+    overflow-x: hidden;
+  }
+
+  .contact-content{
+    padding-top: 25px;
+  }
+
+  .contact-content h1{
+    font-size: 1.8rem;
+  }
+
+  .contact-content p{
+    font-size: 0.9rem;
+    padding: 0 60px;
+    padding-bottom: 30px;
+  }
+
+  .container{
+    padding-top: 25px;
+    flex-direction: row;
+    margin-left: 10px;
+  }
+
+  .horizon{
+    gap: 5px;
+  }
+
+  #email, #phone {
+    width: 24.5vw
+}
+
+.form-group input, .form-group textarea {
+  width: 100%;
+  padding: 10px;
+  font-size: 0.5rem;
+}
+
+.form-group textarea {
+  height: 120px;
+}
+
+.form-container button {
+  padding: 8px 18px;
+  font-size: 0.7rem;
+  box-shadow: 2px 2px 0px #9B904D;
+}
+
+.form-container button:hover{
+  font-size: 1rem;
+  background-color: #ac9c35;
+  color: whitesmoke;
+}
+
+.appointment-container {
+    padding: 12px;
+    width: 45%;
+    margin-top: 0px;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+.appointment-container h1 {
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+
+.appointment-container p {
+  font-size: 0.8rem;
+  margin-bottom: 14px;
+}
+
+.appointment-container .form-group input {
+  padding: 10px;
+  font-size: 0.5rem;
+}
+
+.appointment-container button {
+  padding: 10px;
+  font-size: 0.6rem;
+}
+
+.information{
+  margin-top: 50px;
+}
+
+.information a {
+  padding: 10px;
+  font-size: 0.6rem;
+}
+
+.information a img {
+  height: 25px;
+  width: 25px;
+}
+
+.map-image {
+  margin-top: 50px;
+  padding-bottom: 50px;
+}
+
+.map-image iframe{
+  width: 90%;
+  height: 220px;
+  box-shadow: 4px 4px 0px #9B904D;
+}
+
+footer{
+  margin-top: -30px;
+}
+
+.contact {
+  margin-left: 10px;
+  margin-top: 40px;
+}
+
+.whatsapp, .email, .location {
+  margin-bottom: 15px;
+}
+
+.circle-foot {
+  width: 30px;
+  height: 30px;
+}
+
+.circle-img{
+  padding: 6px;
+    height: 30px;
+    width: 30px;
+}
+
+.whatsapp-content a, .email-content a, .location-content a{
+  font-size: 0.6rem;
+}
+
+.logo1{
+  margin-left: 90px;
+}
+
+.logo1 img{
+  width: 25%;
+  height: auto;
+}
+
+.logo1 p{
+    font-size: 0.6rem;
+    padding-right: 70px;
+    margin-bottom: 10px;
+}
+
+img[alt="CURVE IMAGE"] {
+  top: 0rem;
+  left: 2%;
+  height: 50px;
+  width: 10%;
+}
+
+.copyright h6{
+  font-size: 0.5rem;
+}
+
+}
+
+@media only screen and (min-width: 600px) and (max-width: 767px) {
+
+  img[alt="CURVE IMAGE"] {
+    width: 8%;
+  }
+
+  }
+
+
+
+  @media only screen and (min-width: 768px) and (max-width: 900px){
+
+
+    img[alt="STEP-UP LOGO"] {
+      width: 8%;
+      height: 65px;
+      margin-left: 12px;
+    }
+    
+    .logo a{
+      margin-top: 8px;
+      font-size: 0.6rem;
+    }
+    
+    .logo a img{
+      height: 20px;
+      width: 20px;
+    }
+    
+    .navbar {
+      margin-top: -12px;
+      width: 72%;
+      padding: 15px;
+    }
+    
+    .navbar li {
+      margin: -2px 22px;
+      margin-top: -10px;
+    }
+    
+    .navbar li a{
+      font-size: 0.7rem;
+    }
+    }
+    
+  
+  @media only screen and (min-width: 901px) and (max-width: 1024px){
+  
+  
+  img[alt="STEP-UP LOGO"] {
+    width: 8%;
+    height: 65px;
+    margin-left: 12px;
+  }
+  
+  .logo a{
+    margin-top: 5px;
+    font-size: 0.7rem;
+  }
+  
+  .logo a img{
+    height: 20px;
+    width: 20px;
+  }
+  
+  .navbar {
+    margin-top: -18px;
+    width: 68%;
+    padding: 15px;
+  }
+  
+  .navbar li {
+    margin: -2px 25px;
+    margin-top: -6px;
+  }
+  
+  .navbar li a{
+    font-size: 0.7rem;
+  }
+  }
+  
+  @media only screen and (min-width: 768px) and (max-width: 1024px){
+
+    main{
+      overflow-x: hidden;
+    }
+  
+    .contact-content{
+      padding-top: 35px;
+    }
+  
+    .contact-content h1{
+      font-size: 2.2rem;
+    }
+  
+    .contact-content p{
+      font-size: 1.1rem;
+      padding: 0 100px;
+      padding-bottom: 50px;
+    }
+  
+    .container{
+      padding-top: 25px;
+      flex-direction: row;
+      margin-left: 10px;
+    }
+  
+    .horizon{
+      gap: 5px;
+    }
+  
+    #email, #phone {
+      width: 24.5vw
+  }
+  
+  .form-group input, .form-group textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 0.7rem;
+  }
+  
+  .form-group textarea {
+    height: 140px;
+  }
+  
+  .form-container button {
+    padding: 12px 25px;
+    font-size: 0.9rem;
+    box-shadow: 3px 3px 0px #9B904D;
+  }
+
+  .form-container button:hover{
+    font-size: 1.2rem;
+    background-color: #ac9c35;
+    color: whitesmoke;
+  }
+  
+  .appointment-container {
+      padding: 15px;
+      width: 45%;
+      margin-top: 0px;
+      margin-right: 10px;
+      margin-left: 10px;
+  }
+  
+  .appointment-container h1 {
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+  }
+  
+  .appointment-container p {
+    font-size: 1rem;
+    margin-bottom: 14px;
+  }
+  
+  .appointment-container .form-group input {
+    padding: 10px;
+    font-size: 0.7rem;
+  }
+  
+  .appointment-container button {
+    padding: 15px;
+    font-size: 0.8rem;
+  }
+  
+  .information{
+    margin-top: 100px;
+  }
+  
+  .information a {
+    padding: 20px;
+    font-size: 0.8rem;
+  }
+  
+  .information a img {
+    height: 30px;
+    width: 30px;
+  }
+  
+  .map-image {
+    margin-top: 100px;
+    padding-bottom: 50px;
+  }
+  
+  .map-image iframe {
+    width: 90%;
+    height: 300px;
+    box-shadow: 5px 5px 0px #9B904D;
+  }
+
+  
+footer{
+  margin-top: -30px; 
+ }
+ 
+ .contact {
+   margin-left: 70px;
+   margin-top: 40px;
+ }
+ 
+ .whatsapp, .email, .location {
+   margin-bottom: 15px;
+ }
+ 
+ .circle-foot {
+   width: 35px;
+   height: 35px;
+ }
+ 
+ .circle-img{
+   padding: 6px;
+     height: 35px;
+     width: 35px;
+ }
+ 
+ .whatsapp-content a, .email-content a, .location-content a{
+   font-size: 0.8rem;
+ }
+ 
+ .logo1{
+   margin-left: 120px;
+ }
+ 
+ .logo1 img{
+   width: 25%;
+   height: auto;
+ }
+ 
+ .logo1 p{
+     font-size: 0.8rem;
+     padding-right: 70px;
+     margin-bottom: 10px;
+ }
+ 
+ img[alt="CURVE IMAGE"] {
+   top: 0rem;
+   left: 3%;
+   height: 50px;
+   width: 6%;
+ }
+ 
+ .copyright h6{
+   font-size: 0.6rem;
+ }
+
+}
+
+
+@media only screen and (min-width: 1025px) and (max-width: 1200px) {
+
+  .navbar {
+    padding: 10px;
+  }
+
+  .navbar li {
+    margin: 0 22px;
+  }
+
+  .navbar li a {
+    font-size: 0.8rem;
+  }
+
+  img[alt="CURVE IMAGE"] {
+    top: -3.8rem;
+    left: 2%;
+    height: 70px;
+    width: 7%;
+  }
+
+  .logo1 {
+    margin-left: 110px;
+  }
+
+  .horizon{
+    gap: 5px;
+  }
+
+  #email, #phone {
+    width: 24.5vw
+}
+
+.form-group input, .form-group textarea {
+  width: 100%;
+}
+
+.appointment-container {
+    width: 45%;
+}
+
+}
+
+
+@media only screen and (min-width: 1440px) {
+
+ .logo1 img {
+  width: 20%;
+  height: auto;
+}
+
+img[alt="CURVE IMAGE"] {
+  height: 120px;
+  width: 5%;
+}
 }

@@ -90,34 +90,39 @@ img[alt="STEP-UP LOGO"] {
   /* Rounded corners for the line */
 }
 
-#our{
-  transition: all 0.5s ease; /* Smooth transition for hover effects */
+#our {
+  transition: all 0.5s ease;
+  /* Smooth transition for hover effects */
 }
 
-#our:hover{
+#our:hover {
   background-color: #F67682;
   color: white;
 }
-
 
 main {
   background-color: #FEFAE0;
 }
 
-img[alt="MIAN IMAGE WITH BOTTOM CURVE"] {
+/* img[alt="MIAN IMAGE WITH BOTTOM CURVE"] {
   width: 100%;
   margin-top: 30px;
-}
+} */
 
 .our-therapies {
   display: flex;
-  position: absolute;
-  top: 30%;
+  background-image: url('../images/00202020.png');
+  width: 100%;
+  height: 500px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .our-therapies img {
   width: 40%;
   margin-right: 60px;
+  height: 400px;
 }
 
 .therapies-content {
@@ -141,8 +146,6 @@ img[alt="MIAN IMAGE WITH BOTTOM CURVE"] {
   color: grey;
   max-width: 70%;
 }
-
-
 
 .occupational-therapy,
 .speech-therapy,
@@ -237,7 +240,18 @@ footer {
 .info {
   display: flex;
   justify-content: space-around;
-  background-color: #005D8D;
+  background-color: #0585C6;
+  position: relative;
+  z-index: 10;
+}
+
+.wave-container {
+  position: absolute;
+  top: 0px;
+  left: 0;
+  width: 100%;
+  z-index: -1;
+  /* Keep the wave behind the content */
 }
 
 .contact {
@@ -314,7 +328,6 @@ footer {
   color: royalblue;
   text-decoration: none;
 }
-
 
 
 /* Responsive Design */
@@ -405,37 +418,6 @@ footer {
   footer {
     height: 100%;
     width: 100%;
-  }
-
-  img[alt="MIAN IMAGE WITH BOTTOM CURVE"] {
-    width: 100%;
-    margin-top: 15px;
-    height: 190px;
-  }
-
-  .our-therapies {
-    top: 12%;
-  }
-
-  .therapies-content {
-    margin-left: 10px;
-  }
-
-  .therapies-content h1 {
-    font-size: 1rem;
-  }
-
-  .therapies-content h2 {
-    font-size: 0.8rem;
-  }
-
-  .therapies-content p {
-    font-size: 0.4rem
-  }
-
-  .our-therapies img {
-    width: 35%;
-    margin-right: 15px;
   }
 
   .occupational-therapy,
@@ -549,8 +531,73 @@ footer {
     font-size: 0.5rem;
   }
 
+}
+
+
+@media only screen and (min-width: 320px) and (max-width: 410px) {
+
+  .our-therapies {
+    height: 150px;
+  }
+
+  .therapies-content h1 {
+    font-size: 0.8rem;
+  }
+
+  .therapies-content h2 {
+    font-size: 0.6rem;
+  }
+
+  .therapies-content p {
+    font-size: 0.35rem;
+  }
+
+  .our-therapies img {
+    width: 35%;
+    margin-right: 15px;
+    height: 110px;
+  }
+
+  .therapies-content {
+    margin-left: 10px;
+    margin-top: 10px;
+  }
 
 }
+
+@media only screen and (min-width: 411px) and (max-width: 480px) {
+
+  .our-therapies {
+    height: 200px;
+    margin-top: -15px;
+  }
+
+  .therapies-content h1 {
+    font-size: 0.8rem;
+  }
+
+  .therapies-content h2 {
+    font-size: 0.6rem;
+  }
+
+  .therapies-content p {
+    font-size: 0.35rem;
+  }
+
+  .our-therapies img {
+    width: 40%;
+    margin-right: 15px;
+    height: 120px;
+    margin-top: 22px;
+  }
+
+  .therapies-content {
+    margin-left: 15px;
+    margin-top: 35px;
+  }
+
+}
+
 
 
 @media only screen and (min-width: 481px) and (max-width: 600px) {
@@ -644,37 +691,6 @@ footer {
 
   main {
     overflow-x: hidden;
-  }
-
-  img[alt="MIAN IMAGE WITH BOTTOM CURVE"] {
-    width: 100%;
-    margin-top: 15px;
-    height: 190px;
-  }
-
-  .our-therapies {
-    top: 12%;
-  }
-
-  .therapies-content {
-    margin-left: 10px;
-  }
-
-  .therapies-content h1 {
-    font-size: 1.2rem;
-  }
-
-  .therapies-content h2 {
-    font-size: 1rem;
-  }
-
-  .therapies-content p {
-    font-size: 0.5rem
-  }
-
-  .our-therapies img {
-    width: 40%;
-    margin-right: 15px;
   }
 
   .occupational-therapy,
@@ -798,6 +814,72 @@ footer {
 
   img[alt="CURVE IMAGE"] {
     width: 8%;
+  }
+
+}
+
+@media only screen and (min-width: 481px) and (max-width: 600px) {
+
+  .our-therapies {
+    height: 250px;
+    margin-top: -15px;
+  }
+
+  .therapies-content h1 {
+    font-size: 1rem;
+  }
+
+  .therapies-content h2 {
+    font-size: 0.8rem;
+  }
+
+  .therapies-content p {
+    font-size: 0.45rem;
+  }
+
+  .our-therapies img {
+    width: 40%;
+    margin-right: 15px;
+    height: 130px;
+    margin-top: 22px;
+  }
+
+  .therapies-content {
+    margin-left: 15px;
+    margin-top: 35px;
+  }
+
+}
+
+@media only screen and (min-width: 601px) and (max-width: 767px) {
+
+  .our-therapies {
+    height: 300px;
+    margin-top: -15px;
+  }
+
+  .therapies-content h1 {
+    font-size: 1.2rem;
+  }
+
+  .therapies-content h2 {
+    font-size: 1rem;
+  }
+
+  .therapies-content p {
+    font-size: 0.55rem;
+  }
+
+  .our-therapies img {
+    width: 40%;
+    margin-right: 15px;
+    height: 150px;
+    margin-top: 40px;
+  }
+
+  .therapies-content {
+    margin-left: 20px;
+    margin-top: 50px;
   }
 
 }
@@ -1030,6 +1112,73 @@ footer {
 
 }
 
+@media only screen and (min-width: 768px) and (max-width: 900px) {
+
+  .our-therapies {
+    height: 350px;
+    margin-top: -15px;
+  }
+
+  .therapies-content h1 {
+    font-size: 1.5rem;
+  }
+
+  .therapies-content h2 {
+    font-size: 1.2rem;
+  }
+
+  .therapies-content p {
+    font-size: 0.65rem;
+  }
+
+  .our-therapies img {
+    width: 40%;
+    margin-right: 15px;
+    height: 170px;
+    margin-top: 45px;
+  }
+
+  .therapies-content {
+    margin-left: 25px;
+    margin-top: 55px;
+  }
+
+}
+
+@media only screen and (min-width: 901px) and (max-width: 1024px) {
+
+  .our-therapies {
+    height: 400px;
+    margin-top: -15px;
+  }
+
+  .therapies-content h1 {
+    font-size: 1.8rem;
+  }
+
+  .therapies-content h2 {
+    font-size: 1.5rem;
+  }
+
+  .therapies-content p {
+    font-size: 0.75rem;
+  }
+
+  .our-therapies img {
+    width: 40%;
+    margin-right: 15px;
+    height: 190px;
+    margin-top: 50px;
+  }
+
+  .therapies-content {
+    margin-left: 30px;
+    margin-top: 60px;
+  }
+
+}
+
+
 @media only screen and (min-width: 1025px) and (max-width: 1200px) {
 
   .navbar {
@@ -1059,6 +1208,35 @@ footer {
     margin-left: 110px;
   }
 
+  .our-therapies {
+    height: 450px;
+    margin-top: -15px;
+  }
+
+  .therapies-content h1 {
+    font-size: 2rem;
+  }
+
+  .therapies-content h2 {
+    font-size: 1.8rem;
+  }
+
+  .therapies-content p {
+    font-size: 0.8rem;
+  }
+
+  .our-therapies img {
+    width: 40%;
+    margin-right: 15px;
+    height: 240px;
+    margin-top: 50px;
+  }
+
+  .therapies-content {
+    margin-left: 30px;
+    margin-top: 60px;
+  }
+
 }
 
 @media only screen and (min-width: 1440px) {
@@ -1070,12 +1248,89 @@ footer {
   .logo1 img {
     width: 20%;
     height: auto;
-}
+  }
 
 
-img[alt="CURVE IMAGE"] {
-  height: 120px;
-  width: 5%;
+  img[alt="CURVE IMAGE"] {
+    height: 120px;
+    width: 5%;
+  }
+
 }
+
+@media only screen and (min-width: 1350px) {
+
+  .our-therapies {
+    height: 650px;
+    margin-top: -15px;
+  }
+
+}
+
+@media only screen and (min-width: 1750px) {
+
+  .our-therapies {
+    height: 750px;
+    margin-top: -15px;
+  }
+
+  .therapies-content {
+    margin-top: 120px;
+  }
+
+  .our-therapies img {
+    margin-top: 120px;
+  }
+
+}
+
+@media only screen and (min-width: 2000px) {
+
+  .our-therapies {
+    height: 900px;
+    margin-top: -15px;
+  }
+
+  .therapies-content {
+    margin-top: 150px;
+  }
+
+  .our-therapies img {
+    margin-top: 150px;
+  }
+
+}
+
+@media only screen and (min-width: 2400px) {
+
+  .our-therapies {
+    height: 1100px;
+    margin-top: -15px;
+  }
+
+  .therapies-content {
+    margin-top: 150px;
+  }
+
+  .our-therapies img {
+    margin-top: 150px;
+  }
+
+}
+
+@media only screen and (min-width: 2900px) {
+
+  .our-therapies {
+    height: 1300px;
+    margin-top: -15px;
+  }
+
+  .therapies-content {
+    margin-top: 150px;
+  }
+
+  .our-therapies img {
+    margin-top: 150px;
+  }
 
 }

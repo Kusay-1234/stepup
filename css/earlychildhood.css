@@ -274,9 +274,18 @@ footer{
 .info{
   display: flex;
   justify-content: space-around;
-  background-color: #005D8D;
+  background-color: #0585C6;
+  position: relative;
+  z-index: 10;
 }
 
+.wave-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: -1; /* Keep the wave behind the content */
+}
 .contact{
   margin-left: 150px;
   margin-top: 40px;

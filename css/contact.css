@@ -220,10 +220,9 @@ color: white;
   background-color: black;
 }
 
-
 .contact-info {
   display: flex;
-  justify-content: space-between; /* Distribute the items evenly */
+  justify-content: center; 
   margin-top: 80px;
 }
 
@@ -240,23 +239,14 @@ color: white;
   text-decoration: none;
   color: black;
   transition: background-color 0.6s ease;
-  flex: 1;
-  margin: 0 10px; /* Optional: add margin between items */
+  margin: 0 10px; 
 }
 
 .contact-item:hover {
-  background-color: #FF7676; /* Change background on hover */
-}
-
-.contact-icon {
-  width: 60px; /* Set a fixed size for the icons */
-  height: 60px; 
+  background-color: #FF7676;
 }
 
 .contact-text {
-  display: inline-block;
-  word-wrap: break-word; /* Allow long text to wrap in the container */
-  white-space: pre-wrap; /* Ensure that the line breaks are respected */
   font-weight: bold;
   font-family: "Potta one";
   font-size: 1.5rem;
@@ -295,7 +285,17 @@ footer{
 .info{
   display: flex;
   justify-content: space-around;
-  background-color: #005D8D;
+  background-color: #0585C6;
+  position: relative;
+  z-index: 10;
+}
+
+.wave-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: -1; /* Keep the wave behind the content */
 }
 
 .contact{
@@ -605,11 +605,12 @@ footer{
 }
 
 .contact-item{
-  padding: 15px;
+  padding: 10px;
+  margin: 0 5px;
 }
 
 .contact-text{
-  font-size: 0.8rem;
+  font-size: 0.5rem;
 }
 
 .contact-icon{
@@ -862,6 +863,28 @@ img[alt="CURVE IMAGE"] {
   font-size: 0.5rem;
 }
 
+.contact-item{
+  padding: 12px;
+  margin: 0 6px;
+}
+
+.contact-text{
+  font-size: 0.8rem;
+}
+
+.contact-icon{
+  height: 35px;
+  width: 35px;
+}
+
+.contact-info{
+  margin-top: 50px;
+}
+
+#item{
+  margin-top: 20px;
+}
+
 }
 
 @media only screen and (min-width: 600px) and (max-width: 767px) {
@@ -1108,6 +1131,10 @@ footer{
  .copyright h6{
    font-size: 0.6rem;
  }
+
+ .contact-text{
+  font-size: 1rem;
+}
 
 }
 

@@ -9,7 +9,7 @@ body {
   overflow-x: hidden;
 }
 
-.logo {
+.logo{
   background-color: #6D6875;
   display: flex;
   justify-content: space-between;
@@ -452,8 +452,18 @@ footer {
 
 .info {
   display: flex;
-  justify-content: space-around;
-  background-color: #005D8D;
+  justify-content: space-around;  
+  background-color: #0585C6;
+  position: relative;
+  z-index: 10;
+}
+
+.wave-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: -1; /* Keep the wave behind the content */
 }
 
 .contact {
@@ -466,7 +476,7 @@ footer {
 .location {
   display: flex;
   gap: 10px;
-  margin-bottom: 30px;
+  margin-bottom: 30px;  
 }
 
 .circle-foot {
@@ -530,6 +540,8 @@ footer {
   color: royalblue;
   text-decoration: none;
 }
+
+
 
 
 

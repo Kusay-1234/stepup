@@ -191,9 +191,7 @@ img[alt="A Girl Image"]{
 }
 
 #learnMoreText.hidden {
-  /* display: none !important;  */
-  opacity: 0;
-  visibility: hidden;
+  display: none !important; 
 }
 
 .learn-more-link {
@@ -293,7 +291,17 @@ footer{
 .info{
   display: flex;
   justify-content: space-around;
-  background-color: #005D8D;
+  background-color: #0585C6;
+  position: relative;
+  z-index: 10;
+}
+
+.wave-container {
+  position: absolute;
+ top: 0;
+  left: 0;
+  width: 100%;
+  z-index: -1; /* Keep the wave behind the content */
 }
 
 .contact{
@@ -525,6 +533,10 @@ img[ alt="CIRCLE IMAGE"] {
   font-size: 0.5rem;
 }
 
+.circle.clicked {
+  transform: translateX(52px); 
+}
+
 
 img[alt="CURVE IMAGE"] {
   top: 0rem;
@@ -714,6 +726,11 @@ img[ alt="CIRCLE IMAGE"] {
   bottom: 3.2rem;
   left: 1%;
 }
+
+.circle.clicked {
+  transform: translateX(72px); 
+}
+
 
 .stages{
   flex-wrap: nowrap;
@@ -933,6 +950,10 @@ img[ alt="CIRCLE IMAGE"] {
   width: 10%;
   bottom: 4.2rem;
   left: 1%;
+}
+
+.circle.clicked {
+  transform: translateX(92px); 
 }
 
 .stages{

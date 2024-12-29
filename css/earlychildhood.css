@@ -286,6 +286,7 @@ footer{
   width: 100%;
   z-index: -1; /* Keep the wave behind the content */
 }
+
 .contact{
   margin-left: 150px;
   margin-top: 40px;
@@ -1093,6 +1094,13 @@ footer{
     margin-top: 90px;
   }
 
+}
+
+@media only screen and (min-width: 1350px) and (max-width: 1440px) {
+  img[alt="Second Image"] {
+    left: 87%;
+  }
+  
 }
 
 

@@ -417,7 +417,7 @@ img[alt="WAVE SHAPE IMAGE"] {
   display: block;
   opacity: 1;
   max-width: 60%;
-  max-height: 400px;
+  max-height: 600px;
   /* Adjust based on content size */
   padding-top: 20px;
 }
@@ -1706,13 +1706,17 @@ footer {
   }
 
   .answer.show{
-    max-height: 450px;
+    max-height: 500px;
   }
 }
 
+@media only screen and (min-width: 1025px) and (max-width: 1400px) {
+img[alt="WAVE SHAPE IMAGE"]{
+  height: 270px;
+}
+}
+
 @media only screen and (min-width: 1440px) {
-
-
 
   .logo1 img {
     width: 20%;

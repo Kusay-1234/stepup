@@ -1240,16 +1240,10 @@ footer {
 }
 
 @media only screen and (min-width: 1440px) {
-
-  .our-therapies {
-    top: 10%;
-  }
-
   .logo1 img {
     width: 20%;
     height: auto;
   }
-
 
   img[alt="CURVE IMAGE"] {
     height: 120px;
@@ -1264,13 +1258,26 @@ footer {
     height: 650px;
     margin-top: -15px;
   }
-
 }
 
-@media only screen and (min-width: 1750px) {
+@media only screen and (min-width: 1351px) and (max-width: 1750px) {
+
+  .occupational-therapy-content, .behaviour-therapy-content, .remedial-therapy-content, .special-education-therapy-content{
+    max-width: 50%;
+    padding-left: 150px;
+  }
+
+   .speech-therapy-content, .remedial-therapy-content{
+    padding-right: 150px;
+    padding-left: 150px;
+
+  }
+}
+
+@media only screen and (min-width: 1351px) and (max-width: 1750px) {
 
   .our-therapies {
-    height: 750px;
+    height: 650px;
     margin-top: -15px;
   }
 
@@ -1279,12 +1286,12 @@ footer {
   }
 
   .our-therapies img {
-    margin-top: 120px;
+    margin-top: 60px;
   }
 
 }
 
-@media only screen and (min-width: 2000px) {
+@media only screen and (min-width: 1751px) and (max-width: 2000px) {
 
   .our-therapies {
     height: 900px;
@@ -1301,7 +1308,24 @@ footer {
 
 }
 
-@media only screen and (min-width: 2400px) {
+@media only screen and (min-width: 2001px) and (max-width: 2400px) {
+
+  .our-therapies {
+    height: 900px;
+    margin-top: -15px;
+  }
+
+  .therapies-content {
+    margin-top: 180px;
+  }
+
+  .our-therapies img {
+    margin-top: 180px;
+  }
+
+}
+
+@media only screen and (min-width: 2401px) and (max-width: 2900px) {
 
   .our-therapies {
     height: 1100px;
@@ -1309,28 +1333,11 @@ footer {
   }
 
   .therapies-content {
-    margin-top: 150px;
+    margin-top: 180px;
   }
 
   .our-therapies img {
-    margin-top: 150px;
-  }
-
-}
-
-@media only screen and (min-width: 2900px) {
-
-  .our-therapies {
-    height: 1300px;
-    margin-top: -15px;
-  }
-
-  .therapies-content {
-    margin-top: 150px;
-  }
-
-  .our-therapies img {
-    margin-top: 150px;
+    margin-top: 180px;
   }
 
 }
